@@ -1,894 +1,571 @@
 <?= $this->extend('layout') ?>
 
 <?= $this->section('title') ?>
-Mega Evento Evangelístico en Pichari - Vraem | del 11 al 14 DIC
+Ikimo
 <?= $this->endSection() ?>
 
 <?= $this->section('content') ?>
 
-<!-- Banner Area Start Here  -->
-<section class="ms-banner-area pt-60 p-relative">
-    <a class="ms-scroll-down" href="#">DESPLAZARSE HACIA ABAJO</a>
-    <div class="container-fluid ms-maw-1710">
-        <div class="ms-br-30 mx-auto include__bg z-index-1 ms-overlay-1 p-relative"
-            data-background="<?= base_url('assets/img/banner/banner-thumb-01.jpg'); ?>">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-xl-11">
-                        <div class="ms-banner__main-wrapper">
-                            <div class="ms-banner__content text-center">
-                                <h1 class="ms-banner__bg-title"
-                                    data-background="<?= base_url('assets/img/banner/title-bg.jpg') ?>">
-                                    mega evento <br />evangelístico
-                                </h1>
-                                <h2 class="ms-banner__title msg_title bd-title-anim">
-                                    Pichari - Vraem <br /> del 11 al 14 DIC</h2>
-                                <br />
-                                <button class="input__btn" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
-                                    <i class="fa-solid fa-paper-plane"></i> Reservar Lugar Ahora
-                                </button>
-                            </div>
-                        </div>
+<!-- Page illustration -->
+<div class="cpqz8 ccj7j cbxke cssij cf7dm cossi" aria-hidden="true">
+    <img class="cwchu" src="<?php echo base_url('assets/images/page-illustration.svg')?>" width="846"
+        height="594" alt="Page illustration">
+</div>
+<!-- Hero -->
+<section>
+    <div class="cnr4s c1b3v c1nzj cg7lc">
+        <div class="cwt1y cegiy" style="display: flex; flex-wrap: wrap; align-items: center; gap: 2rem;">
+            <!-- Parte Izquierda -->
+            <div style="flex: 1 1 320px; min-width: 280px;">
+                <!-- Section header -->
+                <div class="c7bf6">
+                    <h1 class="cfmhn clkfy ca6xa cmgwh cndaf cgrvg cjy9f c8jw0 c370l cm1lk" data-aos="fade-up">
+                        Tu negocio multinivel merece un software de nivel empresarial
+                    </h1>
+                    <div class="c90dr c1nzj">
+                        <p class="cthiu cfshg cs7a1" data-aos="fade-up" data-aos-delay="200">
+                            El crecimiento de tu red puede volverse un caos: errores en comisiones, falta de transparencia y pérdida de confianza. Con un software MLM profesional, evitas esos problemas
+                        </p>
+                        <p class="cthiu cby5j cxbbo" style="padding-bottom: 1.5rem;">
+                            En EVOX llevamos +8 años desarrollando software multinivel en la nube, con seguridad garantizada en AWS, Azure y Google Cloud.
+                        </p>
                     </div>
                 </div>
+            </div>
+            <!-- Parte Derecha -->
+            <div style="flex: 1 1 320px; min-width: 280px; display: flex; flex-direction: column; align-items: center;">
+                <div
+                    class="ckmmd cnsl6 c0u5w chuib czlz1 c93x7 cpodb cqmuf c4sxq cjnt3 c0dcb cuq1a c25pz c2gzf" style="padding-bottom: 40px;">
+                    <span class="cjdx7 cmgwh csuc4 ctbdc cgrvg c4sxq">Ingresa tus datos y solicita un demo</span>
+                </div>
+                <!-- Contact form -->
+                <form name="form" id="form" class="c1nzj" onsubmit="send()" action="javascript:void(0)"
+                    enctype="multipart/form-data" method="post" style="width: 80%;">
+                    <div class="cjc8o">
+                        <div>
+                            <label class="cthiu c25fq c3e84 cqxme cjpk5" for="email"
+                                style="text-align: left;">Nombre</label>
+                            <input id="name" name="name" type="text" class="c9vss cuwvd"
+                                placeholder="Tu nombre y apellidos" required>
+                        </div>
+                        <div>
+                            <label class="cthiu c25fq c3e84 cqxme cjpk5" for="email"
+                                style="text-align: left;">Empresa</label>
+                            <input id="company" name="company" type="text" class="c9vss cuwvd"
+                                placeholder="Empresa" required>
+                        </div>
+                        <div>
+                            <label class="cthiu c25fq c3e84 cqxme cjpk5" for="email"
+                                style="text-align: left;">Email</label>
+                            <input id="email" name="email" type="email" class="c9vss cuwvd"
+                                placeholder="email@ejemplo.com" required>
+                        </div>
+                        <div>
+                            <label class="cthiu c25fq c3e84 cqxme cjpk5" for="email"
+                                style="text-align: left;">Teléfono</label>
+                            <input id="phone" name="phone" type="tel" class="c9vss cuwvd"
+                                placeholder="+51 987654321" required>
+                        </div>
+                    </div>
+                    <div class="cjc8o caswb">
+                        <button id="submit"
+                            class="cjfft c3wrs ctuu0 ccs84 cbip1 csjfu ch2pc ceu05 cuwvd cx2av">
+                            Solicitar demostración gratuita
+                        </button>
+                        <a id="goDemo" href="https://demo.evox-lab.com/"
+                            class="cjfft c3wrs cz81t cdoke cthjc c3wrs cjblw cu25a ctuu0 cc0ec ct5xv cu3wb ckbx6 crbqt chdkf cckl9 ch2pc cqb0q cyp9z cklw9 cuwvd cx2av"
+                            style="width: 100%;display:none;text-align: center;background-color: yellow;">¡ Ver Demo Ahora !</a>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
 </section>
-<!-- Banner Area End Here  -->
 
-<!-- Text scroll area start -->
-<section style="padding-bottom: 50px;" class="text__scroll-area include__bg ms-ts-space p-relative fix"
-    data-background="<?= base_url('assets/img/bg/text-scroll-bg.png') ?>">
-    <div class="text__scroll-wrapper">
-        <div class="ms-text-line-1">
-            <div class="swiper-container ms-st-active scroll__text pt-20 pb-20">
-                <div class="swiper-wrapper ms-st-active-wrapper">
-                    <div class="swiper-slide">
-                        <h3>Avivamiento</h3>
+<!-- ¿Qué es un software MLM? -->
+<section class="cklw9">
+    <div class="cpqz8 cfkn5 cbxke cssij cxawe cf7dm cossi" aria-hidden="true">
+        <img class="cwchu" src="<?php echo site_url() . "assets/images/blurred-shape-gray.svg" ?>" width="760"
+            height="668" alt="Blurred shape">
+    </div>
+    <div class="co5u0 cpqz8 csuym cbxke cssij ciqov ctn85 cossi" aria-hidden="true">
+        <img class="cwchu" src="<?php echo site_url() . "assets/images/blurred-shape.svg" ?>" width="760"
+            height="668" alt="Blurred shape">
+    </div>
+
+    <div class="cnr4s c1b3v c1nzj cg7lc">
+        <div class="creo4 cwt1y c5c70 cegiy">
+            <!-- Section header -->
+            <div class="c7bf6 c90dr cqzei c1nzj c1fmo" style="max-width: 60rem;">
+                <h2 class="cfmhn clkfy ca6xa cmgwh cndaf cgrvg cjy9f czenk cm3px c1fmo">
+                    ¿Qué es un software MLM?
+                </h2>
+                <p class="cthiu cby5j cqzei cxbbo">
+                    Un software MLM es la plataforma que organiza y automatiza tu negocio multinivel: gestiona afiliados, calcula comisiones y muestra resultados en tiempo real para la empresa y sus distribuidores.
+                </p>
+
+                <div class="c1nzj" style="display: flex; flex-wrap: wrap; gap: 2rem;">
+                    <div style="flex: 1 1 0; min-width: 220px;margin-bottom: -10px;">
+                        <h3 class="cthiu cby5j c336v cndaf cr6se cjy9f cjpk5">
+                            <svg style="margin: auto;  display: initial;" class="c51ou clgbu cynlw cmsi1 c6ulg ceik7" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>
+                            </svg>&nbsp;&nbsp;Crecimiento sin límites
+                        </h3>
                     </div>
-                    <div class="swiper-slide">
-                        <h3>Perú</h3>
+                    <div style="flex: 1 1 0; min-width: 220px;margin-bottom: -10px;">
+                        <h3 class="cthiu cby5j c336v cndaf cr6se cjy9f cjpk5">
+                            <svg style="margin: auto;  display: initial;" class="c51ou clgbu cynlw cmsi1 c6ulg ceik7" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>
+                            </svg>&nbsp;&nbsp;Comisiones en tiempo real
+                        </h3>
                     </div>
-                    <div class="swiper-slide">
-                        <h3><span class="text-color-1">G3</span></h3>
+                    <div style="flex: 1 1 0; min-width: 220px;margin-bottom: -10px;">
+                        <h3 class="cthiu cby5j c336v cndaf cr6se cjy9f cjpk5">
+                            <svg style="margin: auto;  display: initial;" class="c51ou clgbu cynlw cmsi1 c6ulg ceik7" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>
+                            </svg>&nbsp;&nbsp;Transparencia para cada afiliado
+                        </h3>
                     </div>
-                    <div class="swiper-slide">
-                        <h3>Gran</h3>
+                    <div style="flex: 1 1 0; min-width: 220px;margin-bottom: -10px;">
+                        <h3 class="cthiu cby5j c336v cndaf cr6se cjy9f cjpk5">
+                            <svg style="margin: auto;  display: initial;" class="c51ou clgbu cynlw cmsi1 c6ulg ceik7" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>
+                            </svg>&nbsp;&nbsp;Bonos configurables que motivan
+                        </h3>
                     </div>
-                    <div class="swiper-slide">
-                        <h3><span class="text-color-1">Mega</span></h3>
-                    </div>
-                    <div class="swiper-slide">
-                        <h3>Evento</h3>
-                    </div>
-                    <div class="swiper-slide">
-                        <h3>Evangelístico</h3>
-                    </div>
-                    <div class="swiper-slide">
-                        <h3><span class="text-color-2">Pichari</span></h3>
-                    </div>
-                    <div class="swiper-slide">
-                        <h3>Vraem</h3>
-                    </div>
-                    <div class="swiper-slide">
-                        <h3>11</h3>
-                    </div>
-                    <div class="swiper-slide">
-                        <h3>al</h3>
-                    </div>
-                    <div class="swiper-slide">
-                        <h3><span class="text-color-1">14</span></h3>
-                    </div>
-                    <div class="swiper-slide">
-                        <h3>DIC</h3>
-                    </div>
-                    <div class="swiper-slide">
-                        <h3><span class="text-color-1">Regístrate</span></h3>
-                    </div>
-                    <div class="swiper-slide">
-                        <h3>Participa</h3>
-                    </div>
-                    <div class="swiper-slide">
-                        <h3>Gratis</h3>
-                    </div>
-                    <div class="swiper-slide">
-                        <h3><span class="text-color-2">Encuentro</span></h3>
-                    </div>
-                    <div class="swiper-slide">
-                        <h3>de Fe</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="ms-text-line-2">
-            <div class="swiper-container ms-str-active scroll__text pt-20 pb-20">
-                <div class="swiper-wrapper ms-str-active-wrapper">
-                    <div class="swiper-slide">
-                        <h3>Avivamiento</h3>
-                    </div>
-                    <div class="swiper-slide">
-                        <h3>Perú</h3>
-                    </div>
-                    <div class="swiper-slide">
-                        <h3><span class="text-color-1">G3</span></h3>
-                    </div>
-                    <div class="swiper-slide">
-                        <h3>Gran</h3>
-                    </div>
-                    <div class="swiper-slide">
-                        <h3><span class="text-color-1">Mega</span></h3>
-                    </div>
-                    <div class="swiper-slide">
-                        <h3>Evento</h3>
-                    </div>
-                    <div class="swiper-slide">
-                        <h3>Evangelístico</h3>
-                    </div>
-                    <div class="swiper-slide">
-                        <h3><span class="text-color-2">Pichari</span></h3>
-                    </div>
-                    <div class="swiper-slide">
-                        <h3>Vraem</h3>
-                    </div>
-                    <div class="swiper-slide">
-                        <h3>11</h3>
-                    </div>
-                    <div class="swiper-slide">
-                        <h3>al</h3>
-                    </div>
-                    <div class="swiper-slide">
-                        <h3><span class="text-color-1">14</span></h3>
-                    </div>
-                    <div class="swiper-slide">
-                        <h3>DIC</h3>
-                    </div>
-                    <div class="swiper-slide">
-                        <h3><span class="text-color-1">Regístrate</span></h3>
-                    </div>
-                    <div class="swiper-slide">
-                        <h3>Participa</h3>
-                    </div>
-                    <div class="swiper-slide">
-                        <h3>Gratis</h3>
-                    </div>
-                    <div class="swiper-slide">
-                        <h3><span class="text-color-2">Encuentro</span></h3>
-                    </div>
-                    <div class="swiper-slide">
-                        <h3>de Fe</h3>
+                    <div style="flex: 1 1 0; min-width: 220px;margin-bottom: -10px;">
+                        <h3 class="cthiu cby5j c336v cndaf cr6se cjy9f cjpk5">
+                            <svg style="margin: auto;  display: initial;" class="c51ou clgbu cynlw cmsi1 c6ulg ceik7" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>
+                            </svg>&nbsp;&nbsp;Automatización que ahorra tiempo
+                        </h3>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<!-- Text scroll area end -->
-<!-- work area start -->
-<section class="work__area work-overlay pt-50 pb-60 include__bg"
-    data-background="<?= base_url('assets/img/bg/work-bg.jpg') ?>">
-    <img class="work__vactor-shape d-none d-xl-block" src="<?= base_url('assets/img/work/vactoe-shape.png') ?>"
-        alt="vactoe-shape.png">
-    <div class="container">
-        <div class="row align-items-center bdFadeUp">
-            <div class="col-xl-6">
-                <div class="work__thumb-wrapper d-inline-block p-relative mb-60">
-                    <div class="work__thumb-inner">
-                        <div class="work__thumb">
-                            <img src="<?= base_url('assets/img/work/flyer.jpg') ?>" alt="Flyer del evento">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-6">
-                <div class="work__content-wrapper work__content-space mb-70 pl-40">
-                    <div class="section__title-wrapper mb-50 bd-title-anim">
-                        <span class="section__subtitle">¡Bienvenido al Gran Mega Evento Evangelístico!</span>
-                        <h2 class="section__title two">
-                            Días de conferencia profética
-                            <span class="animated-underline active">Noches de Sanidad y Milagros</span>
-                        </h2>
-                    </div>
-                    <div class="work__features-inner">
-                        <div class="work__features-item">
-                            <div class="work__features-icon">
-                                <span>
-                                    <svg width="46" height="27" viewBox="0 0 46 27" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <g clip-path="url(#clip0_36_265)">
-                                            <mask id="mask0_36_265" style="mask-type:alpha"
-                                                maskUnits="userSpaceOnUse" x="2" y="-1" width="42"
-                                                height="27">
-                                                <path
-                                                    d="M40.3981 0.0808105H5.59708C4.33871 0.0808105 3.3186 1.1096 3.3186 2.37868V23.0226C3.3186 24.2917 4.33871 25.3205 5.59708 25.3205H40.3981C41.6565 25.3205 42.6766 24.2917 42.6766 23.0226V2.37868C42.6766 1.1096 41.6565 0.0808105 40.3981 0.0808105Z"
-                                                    fill="#DFEFFF" stroke="#2690FF" stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                            </mask>
-                                            <g mask="url(#mask0_36_265)">
-                                                <path
-                                                    d="M40.3981 0.0808105H5.59708C4.33871 0.0808105 3.3186 1.1096 3.3186 2.37868V23.0226C3.3186 24.2917 4.33871 25.3205 5.59708 25.3205H40.3981C41.6565 25.3205 42.6766 24.2917 42.6766 23.0226V2.37868C42.6766 1.1096 41.6565 0.0808105 40.3981 0.0808105Z"
-                                                    stroke="white" stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                            </g>
-                                            <mask id="mask1_36_265" style="mask-type:alpha"
-                                                maskUnits="userSpaceOnUse" x="0" y="23" width="46"
-                                                height="4">
-                                                <path
-                                                    d="M3.05673 25.8934C3.60661 26.3559 4.56615 26.7308 5.19913 26.7308H41.5731C42.2065 26.7308 43.1378 26.2914 43.6562 25.7464L45.0058 24.3275C45.523 23.7838 45.4265 23.343 44.7957 23.343H1.17102C0.537823 23.343 0.470957 23.7185 1.02017 24.1805L3.05673 25.8934Z"
-                                                    fill="#2690FF" />
-                                            </mask>
-                                            <g mask="url(#mask1_36_265)">
-                                                <path
-                                                    d="M3.05673 25.8934C3.60661 26.3559 4.56615 26.7308 5.19913 26.7308H41.5731C42.2065 26.7308 43.1378 26.2914 43.6562 25.7464L45.0058 24.3275C45.523 23.7838 45.4265 23.343 44.7957 23.343H1.17102C0.537823 23.343 0.470957 23.7185 1.02017 24.1805L3.05673 25.8934Z"
-                                                    fill="white" />
-                                            </g>
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                d="M14.6847 16.2461H16.1739L15.057 10.614H11.7063L10.9617 16.2461H12.4509V17.7478C12.4509 18.368 12.9509 18.8743 13.5678 18.8743C14.1889 18.8743 14.6847 18.37 14.6847 17.7478V16.2462V16.2461Z"
-                                                fill="white" stroke="white" stroke-linecap="round"
-                                                stroke-linejoin="round" />
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                d="M21.7584 18.8743H20.2692L18.4077 10.6139H23.6199L21.7584 18.8743Z"
-                                                fill="white" stroke="white" stroke-linecap="round"
-                                                stroke-linejoin="round" />
-                                            <path
-                                                d="M13.3817 9.48762C14.3069 9.48762 15.057 8.73116 15.057 7.79801C15.057 6.86486 14.3069 6.1084 13.3817 6.1084C12.4564 6.1084 11.7063 6.86486 11.7063 7.79801C11.7063 8.73116 12.4564 9.48762 13.3817 9.48762Z"
-                                                fill="white" stroke="white" stroke-linecap="round"
-                                                stroke-linejoin="round" />
-                                            <path
-                                                d="M20.8277 9.48762C21.753 9.48762 22.5031 8.73116 22.5031 7.79801C22.5031 6.86486 21.753 6.1084 20.8277 6.1084C19.9024 6.1084 19.1523 6.86486 19.1523 7.79801C19.1523 8.73116 19.9024 9.48762 20.8277 9.48762Z"
-                                                fill="white" stroke="white" stroke-linecap="round"
-                                                stroke-linejoin="round" />
-                                            <path d="M27.9299 7.56274H34.8759" stroke="white"
-                                                stroke-linecap="round" />
-                                            <path d="M27.9299 10.4714H34.8759" stroke="white"
-                                                stroke-linecap="round" />
-                                            <path d="M27.9299 13.3801H34.8759" stroke="white"
-                                                stroke-linecap="round" />
-                                            <path d="M27.9299 16.2888H32.5446" stroke="white"
-                                                stroke-linecap="round" />
-                                        </g>
-                                        <defs>
-                                            <clipPath id="clip0_36_265">
-                                                <rect width="45" height="27" fill="white"
-                                                    transform="translate(0.523438)" />
-                                            </clipPath>
-                                        </defs>
-                                    </svg>
-                                </span>
-                            </div>
-                            <div class="work__features-content">
-                                <h4>¡Tu Acceso Total y Gratuito!</h4>
-                                <p>Asegura tu lugar en las 4 noches de poder y milagros. La entrada es completamente GRATIS al registrarte hoy.</p>
-                            </div>
-                        </div>
-                        <div class="work__features-item">
-                            <div class="work__features-icon">
-                                <span>
-                                    <svg width="46" height="42" viewBox="0 0 46 42" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <g clip-path="url(#clip0_36_396)">
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                d="M36.5665 12.3724C38.1067 12.677 39.8538 12.4088 41.4313 11.4975C44.5453 9.70015 45.8206 6.07889 44.2793 3.4094C42.7388 0.740078 38.965 0.0338131 35.8508 1.83184C34.2735 2.7425 33.1675 4.12203 32.6608 5.60739L36.5665 12.3724Z"
-                                                stroke="white" stroke-linecap="round"
-                                                stroke-linejoin="round" />
-                                            <mask id="mask0_36_396" style="mask-type:alpha"
-                                                maskUnits="userSpaceOnUse" x="38" y="2" width="4"
-                                                height="4">
-                                                <path
-                                                    d="M38.9634 2.95068L40.5035 3.36336L40.0908 4.90348L38.5507 4.4908L38.9634 2.95068Z"
-                                                    stroke="#2690FF" stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                            </mask>
-                                            <g mask="url(#mask0_36_396)">
-                                                <path
-                                                    d="M39.8188 2.83813L40.6161 4.21897L39.2352 5.01619L38.438 3.63536L39.8188 2.83813Z"
-                                                    stroke="white" stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                            </g>
-                                            <mask id="mask1_36_396" style="mask-type:alpha"
-                                                maskUnits="userSpaceOnUse" x="39" y="5" width="4"
-                                                height="4">
-                                                <path
-                                                    d="M40.5579 5.7124L42.098 6.12508L41.6853 7.6652L40.1452 7.25252L40.5579 5.7124Z"
-                                                    stroke="#2690FF" stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                            </mask>
-                                            <g mask="url(#mask1_36_396)">
-                                                <path
-                                                    d="M41.4133 5.59985L42.2106 6.98069L40.8297 7.77791L40.0325 6.39708L41.4133 5.59985Z"
-                                                    stroke="white" stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                            </g>
-                                            <mask id="mask2_36_396" style="mask-type:alpha"
-                                                maskUnits="userSpaceOnUse" x="36" y="5" width="4"
-                                                height="4">
-                                                <path
-                                                    d="M36.999 5.92603L38.5391 6.3387L38.1265 7.87882L36.5863 7.46614L36.999 5.92603Z"
-                                                    stroke="#2690FF" stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                            </mask>
-                                            <g mask="url(#mask2_36_396)">
-                                                <path
-                                                    d="M37.8545 5.81348L38.6517 7.19431L37.2709 7.99153L36.4737 6.6107L37.8545 5.81348Z"
-                                                    stroke="white" stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                            </g>
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                d="M33.0191 6.22821L36.2079 11.7513L33.4466 13.3461L30.2571 7.82284L33.0191 6.22821Z"
-                                                fill="white" stroke="white" stroke-width="2"
-                                                stroke-linecap="round" stroke-linejoin="round" />
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                d="M30.2575 7.82262L33.4462 13.3457L15.0969 23.0193L12.7052 18.8768L30.2575 7.82262Z"
-                                                stroke="white" stroke-linecap="round"
-                                                stroke-linejoin="round" />
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                d="M13.1038 19.5673L14.6985 22.3293L11.9367 23.9233L10.3419 21.1619L13.1038 19.5673Z"
-                                                fill="white" stroke="white" stroke-width="2"
-                                                stroke-linecap="round" stroke-linejoin="round" />
-                                            <path d="M11.1395 22.5428L4.23499 26.5292" stroke="white"
-                                                stroke-linecap="square" stroke-linejoin="round" />
-                                            <path
-                                                d="M3.54494 26.9275C1.63803 28.0284 0.984887 30.466 2.08584 32.3729C3.18697 34.2791 5.62455 34.9323 7.53127 33.832M11.5172 40.7358C13.4241 39.6348 14.0772 37.1973 12.9763 35.2904C11.8751 33.3841 9.43756 32.731 7.53084 33.8313"
-                                                stroke="white" stroke-linecap="round"
-                                                stroke-linejoin="round" />
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                d="M29.0258 35.4579C30.7317 35.4579 32.115 34.5359 32.115 33.3984C32.115 32.2608 30.7317 31.3389 29.0258 31.3389C27.3198 31.3389 25.9365 32.2608 25.9365 33.3984C25.9365 34.5359 27.3198 35.4579 29.0258 35.4579Z"
-                                                fill="white" />
-                                            <path d="M31.4285 32.7118V23.1736" stroke="white"
-                                                stroke-linecap="round" stroke-linejoin="round" />
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                d="M37.9503 38.204C39.6563 38.204 41.0396 37.282 41.0396 36.1445C41.0396 35.0069 39.6563 34.085 37.9503 34.085C36.2444 34.085 34.8611 35.0069 34.8611 36.1445C34.8611 37.282 36.2444 38.204 37.9503 38.204Z"
-                                                fill="white" />
-                                            <path d="M40.3529 34.7713V25.4452L31.4285 23.1008"
-                                                stroke="white" stroke-linecap="round"
-                                                stroke-linejoin="round" />
-                                        </g>
-                                        <defs>
-                                            <clipPath id="clip0_36_396">
-                                                <rect width="45" height="41.4474" fill="white"
-                                                    transform="translate(0.523438)" />
-                                            </clipPath>
-                                        </defs>
-                                    </svg>
-                                </span>
-                            </div>
-                            <div class="work__features-content">
-                                <h4>Vive una Experiencia Inolvidable</h4>
-                                <p>Prepárate para días de alabanza, profecía, sanidad y el mensaje transformador con los siervos y ministros confirmados.</p>
-                            </div>
-                        </div>
-                        <div class="work__features-item">
-                            <div class="work__features-icon">
-                                <span>
-                                    <svg width="46" height="30" viewBox="0 0 46 30" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <g clip-path="url(#clip0_36_354)">
-                                            <mask id="mask0_36_354" style="mask-type:alpha"
-                                                maskUnits="userSpaceOnUse" x="6" y="-1" width="41"
-                                                height="27">
-                                                <path
-                                                    d="M9.26562 24.7666L43.3012 24.7666C44.5285 24.7666 45.5234 23.7717 45.5234 22.5444V2.25166C45.5234 1.02435 44.5285 0.0294323 43.3012 0.0294323L9.26562 0.0294323C8.03832 0.0294323 7.0434 1.02435 7.0434 2.25166V22.5444C7.0434 23.7717 8.03832 24.7666 9.26562 24.7666Z"
-                                                    fill="#DFEFFF" stroke="#2690FF" stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                            </mask>
-                                            <g mask="url(#mask0_36_354)">
-                                                <path
-                                                    d="M9.26562 24.7666L43.3012 24.7666C44.5285 24.7666 45.5234 23.7717 45.5234 22.5444V2.25166C45.5234 1.02435 44.5285 0.0294323 43.3012 0.0294323L9.26562 0.0294323C8.03832 0.0294323 7.0434 1.02435 7.0434 2.25166V22.5444C7.0434 23.7717 8.03832 24.7666 9.26562 24.7666Z"
-                                                    stroke="white" stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                            </g>
-                                            <path
-                                                d="M40.7134 17.208L27.6577 17.208M24.9091 17.208L11.8533 17.208"
-                                                stroke="white" stroke-linecap="square"
-                                                stroke-linejoin="round" />
-                                            <path
-                                                d="M31.5173 11.7109L39.6023 11.7109C40.2159 11.7109 40.7134 11.2135 40.7134 10.5998V5.95061C40.7134 5.33696 40.2159 4.8395 39.6023 4.8395L31.5173 4.8395C30.9037 4.8395 30.4062 5.33696 30.4062 5.95061V10.5998C30.4062 11.2135 30.9037 11.7109 31.5173 11.7109Z"
-                                                stroke="white" stroke-width="2" stroke-linecap="round"
-                                                stroke-linejoin="round" />
-                                            <path
-                                                d="M34.5291 11.7109V4.8395M40.7134 8.96236H35.2162M34.5291 7.58808H30.4062"
-                                                stroke="white" stroke-linecap="square"
-                                                stroke-linejoin="round" />
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                d="M1.26636 20.3433H12.9603V28.4391H1.26636V20.3433Z"
-                                                fill="white" stroke="white" stroke-linecap="round"
-                                                stroke-linejoin="round" />
-                                            <path
-                                                d="M12.0606 19.8935C12.0606 17.1611 9.8456 14.946 7.11321 14.946C4.38081 14.946 2.16577 17.1611 2.16577 19.8935"
-                                                stroke="white" stroke-linecap="round"
-                                                stroke-linejoin="round" />
-                                        </g>
-                                        <defs>
-                                            <clipPath id="clip0_36_354">
-                                                <rect width="45" height="29.4444" fill="white"
-                                                    transform="translate(0.523438)" />
-                                            </clipPath>
-                                        </defs>
-                                    </svg>
-                                </span>
-                            </div>
-                            <div class="work__features-content">
-                                <h4>Registrate y Gana Fantásticos Premios</h4>
-                                <ul>
-                                    <ol style="padding-left: 0;color:var(--clr-text-5)">1. Un Lote de Terreno (Premio principal)</ol>
-                                    <ol style="padding-left: 0;color:var(--clr-text-5)">2. Un Teclado Yamaha PSR-E340</ol>
-                                    <ol style="padding-left: 0;color:var(--clr-text-5)">3. Una Batería Acústica</ol>
-                                    <ol style="padding-left: 0;color:var(--clr-text-5)">4. Cinco Celulares de Alta Gama.</ol>
-                                </ul>
-                                <br />
-                                <p>Además, sorteo exclusivo para la iglesia más unida: un púlpito, micrófonos, pedestales y un equipo de sonido completo.</p>
-                            </div>
-                        </div>
-                        <div class="work__features-bottom">
-                            <div class="work__features-action">
-                                <div class="work__features-btn" style="margin: auto;">
-                                    <a class="unfill__btn" href="javascript:void(0);" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Regístrate Gratis y Participa</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+<!-- why choose us -->
+<section class="cklw9">
+    <div class="cpqz8 cfkn5 cbxke cssij cxawe cf7dm cossi" aria-hidden="true">
+        <img class="cwchu" src="<?php echo site_url() . "assets/images/blurred-shape-gray.svg" ?>" width="760"
+            height="668" alt="Blurred shape">
     </div>
-</section>
-<!-- work area end -->
-<!-- video area begin -->
-<section class="ms-event2-area include__bg zindex-1 p-relative pt-140 pb-105" data-background="<?php echo base_url("assets/img/banner/banner-thumb-07.jpg")?>" style="background-image: url(<?php echo base_url("assets/img/banner/banner-thumb-07.jpg")?>);">
-    <div class="ms-overlay ms-overlay1 zindex--1"></div>
-    <div class="container">
-        <div class="row justify-content-center mb-20 bdFadeUp" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">
-            <div class="col-xl-6">
-                <div class="ms-event2-top text-center">
-                    <div class="ms-event2 mb-40">
-                        <a class="ms-round2-btn popup-video" href="https://www.youtube.com/watch?v=Nll5dySeV5Y"><i class="fa-sharp fa-solid fa-play"></i></a>
-                    </div>
-                    <div class="section__title-wrapper mb-40 bd-title-anim" style="perspective: 400px;">
-                        <div style="display: block; text-align: center; position: relative; translate: none; rotate: none; scale: none; transform-origin: 273px 24.5px; transform: translate3d(0px, 0px, 0px); opacity: 1;">
-                            <span class="section__subtitle">Conoce más de nuestros invitados internacionales</span>
-                        </div>
-                        <div style="display: block; text-align: center; position: relative; translate: none; rotate: none; scale: none; transform-origin: 273px 24px; transform: translate3d(0px, 0px, 0px); opacity: 1;">
-                            <h2 class="section__title">El siguiente video <span class="ms-text1">es para ti</span></h2>
-                        </div>
-                    </div>
-                </div>
+    <div class="co5u0 cpqz8 csuym cbxke cssij ciqov ctn85 cossi" aria-hidden="true">
+        <img class="cwchu" src="<?php echo site_url() . "assets/images/blurred-shape.svg" ?>" width="760"
+            height="668" alt="Blurred shape">
+    </div>
+
+    <div class="cnr4s c1b3v c1nzj cg7lc">
+        <div class="creo4 cwt1y c5c70 cegiy">
+            <!-- Section header -->
+            <div class="c7bf6 c90dr cqzei c1nzj c1fmo">
+                <h2 class="cfmhn clkfy ca6xa cmgwh cndaf cgrvg cjy9f czenk cm3px c1fmo">
+                    ¿Por qué elegirnos?
+                </h2>
+                <p class="cthiu cby5j">
+                    El software que entiende tu negocio de redes.
+                </p>
             </div>
-        </div>
-        <!-- <div class="row bdFadeUp" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">
-            <div class="col-lg-6">
-                <div class="ms-event2-item mb-25">
-                    <h3 class="ms-event-title"><a href="event-details.html">Wedding entertainment
-                            ideas</a>
-                    </h3>
-                    <p class="ms-event-text">Our hand-picked acts will guarantee you fantastic
-                        wedding
-                        entertainment for each part.
-                        We'll provide help and support 24 hours a day, 7 days a week, right up until
+
+            <!-- Items -->
+            <div class="cqjw1 c4t1y c5lqd cc219 cvw8b cg5mp c1nzj cxh4o cbb52">
+                <article>
+
+                    <p class="cthiu">
+                        <svg class="c6twd c7xe2" style="display: inline;" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                            <path d="M0 0h14v17H0V0Zm2 2v13h10V2H2Z"></path>
+                            <path fill-opacity=".48"
+                                d="m16.295 5.393 7.528 2.034-4.436 16.412L5.87 20.185l.522-1.93 11.585 3.132 3.392-12.55-5.597-1.514.522-1.93Z">
+                            </path>
+                        </svg> &nbsp;&nbsp;
+                        Compatible con distintos planes (unilevel, binario, híbrido, matriz).
                     </p>
-                    <div class="ms-event-inner">
-                        <div class="ms-event-location">
-                            <a href="https://www.google.com/maps" target="_blank" tabindex="0"><i class="flaticon-pin"></i>Chicago</a>
-                        </div>
-                        <div class="ms-event-date">
-                            <span>7:00 PM, Saturday, February 18, 2023</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="ms-event2-item mb-25">
-                    <h3 class="ms-event-title"><a href="event-details.html">Corporate entertainment
-                            ideas</a>
-                    </h3>
-                    <p class="ms-event-text">Our hand-picked acts will guarantee you fantastic
-                        wedding
-                        entertainment for each part.
-                        We'll provide help and support 24 hours a day, 7 days a week, right up until
+                </article>
+                <article>
+                    <p class="cthiu">
+                        <svg class="c6twd c7xe2" style="display: inline;" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                            <path fill-opacity=".48" d="M7 8V0H5v8h2Zm12 16v-4h-2v4h2Z"></path>
+                            <path d="M19 6H0v2h17v8H7v-6H5v8h19v-2h-5V6Z"></path>
+                        </svg>&nbsp;&nbsp;
+                        Bonos ilimitados configurables con condicionales.
                     </p>
-                    <div class="ms-event-inner">
-                        <div class="ms-event-location">
-                            <a href="https://www.google.com/maps" target="_blank" tabindex="0"><i class="flaticon-pin"></i>Ohio</a>
-                        </div>
-                        <div class="ms-event-date">
-                            <span>9:00 PM, Saturday, February 25, 2023</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="ms-event2-item mb-25">
-                    <h3 class="ms-event-title"><a href="event-details.html">Corporate entertainment
-                            ideas</a>
-                    </h3>
-                    <p class="ms-event-text">Our hand-picked acts will guarantee you fantastic
-                        wedding
-                        entertainment for each part.
-                        We'll provide help and support 24 hours a day, 7 days a week, right up until
+                </article>
+                <article>
+                    <p class="cthiu">
+                        <svg class="c6twd c7xe2" style="display: inline;" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                            <path
+                                d="M23.414 6 18 .586 16.586 2l3 3H7a6 6 0 0 0-6 6h2a4 4 0 0 1 4-4h12.586l-3 3L18 11.414 23.414 6Z">
+                            </path>
+                            <path fill-opacity=".48"
+                                d="M13.01 12.508a2.5 2.5 0 0 0-3.502.482L1.797 23.16.203 21.952l7.71-10.17a4.5 4.5 0 1 1 7.172 5.437l-4.84 6.386-1.594-1.209 4.841-6.385a2.5 2.5 0 0 0-.482-3.503Z">
+                            </path>
+                        </svg>&nbsp;&nbsp;
+                        Panel intuitivo para distribuidores desde el celular.
                     </p>
-                    <div class="ms-event-inner">
-                        <div class="ms-event-location">
-                            <a href="https://www.google.com/maps" target="_blank" tabindex="0"><i class="flaticon-pin"></i>Ohio</a>
-                        </div>
-                        <div class="ms-event-date">
-                            <span>9:00 PM, Saturday, February 25, 2023</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="ms-event2-item mb-25">
-                    <h3 class="ms-event-title"><a href="event-details.html">New Year’s Eve party
-                            bands</a>
-                    </h3>
-                    <p class="ms-event-text">Our hand-picked acts will guarantee you fantastic
-                        wedding
-                        entertainment for each part.
-                        We'll provide help and support 24 hours a day, 7 days a week, right up until
+                </article>
+                <article>
+                    <p class="cthiu">
+                        <svg class="c6twd c7xe2" style="display: inline;" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                            <path fill-opacity=".48"
+                                d="M12 8.8a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z">
+                            </path>
+                            <path
+                                d="m7.454 2.891.891-.454L7.437.655l-.891.454a12 12 0 0 0 0 21.382l.89.454.91-1.781-.892-.455a10 10 0 0 1 0-17.818ZM17.456 1.11l-.891-.454-.909 1.782.891.454a10 10 0 0 1 0 17.819l-.89.454.908 1.781.89-.454a12 12 0 0 0 0-21.382Z">
+                            </path>
+                        </svg>&nbsp;&nbsp;
+                        Seguridad y escalabilidad en AWS, Azure y GCP.
                     </p>
-                    <div class="ms-event-inner">
-                        <div class="ms-event-location">
-                            <a href="https://www.google.com/maps" target="_blank" tabindex="0"><i class="flaticon-pin"></i>City Club</a>
-                        </div>
-                        <div class="ms-event-date">
-                            <span>9:00 PM, Saturday, January 1, 2023</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-    </div>
-</section>
-<!-- Trending area start -->
-<section class="trending__area p-relative z-index-11 x-clip pt-50 pb-130">
-    <span class="trending-round-bg-1"></span>
-    <span class="trending-round-bg-2"></span>
-    <div class="container">
-        <div class="row align-items-end mb-25 bdFadeUp">
-            <div class="col-lg-8">
-                <div class="section__title-wrapper mb-40 bd-title-anim">
-                    <span class="section__subtitle">Invitados Especiales</span>
-                    <div id="msg-title">
-                        <h2 class="section__title">
-                            Prepárate para el mensaje de fe y sanidad que transformará tu vida.</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row bdFadeUp">
-            <div class="trending-grid">
-                <div class="trending-item">
-                    <div class="trending__thumb" data-background="<?= base_url('assets/img/trending/oscarestrada.jpg') ?>"></div>
-                    <div class="trending__info">
-                        <span class="trending__title">Evangelista</span>
-                        <div class="trending__content">
-                            <h4><a>Oscar Estrada</a></h4>
-                            <p>Reconocido evangelista profético cuya trayectoria está dedicada a la predicación de la Palabra de Dios y al servicio en el ministerio. Con una profunda base teológica y una pasión por el servicio, el Pastor Estrada trabaja activamente en C A J TABERNACULO DE DIOS, donde cumple su llamado como pastor y evangelista.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="trending-item">
-                    <div class="trending__thumb" data-background="<?= base_url('assets/img/trending/roggerparedes.jpg') ?>"></div>
-                    <div class="trending__info">
-                        <span class="trending__title">Profeta</span>
-                        <div class="trending__content">
-                            <h4><a>Rogger Paredes</a></h4>
-                            <p>Rogger Paredes es un profeta y líder espiritual con un llamado a la intercesión y la enseñanza. Su ministerio se caracteriza por una profunda conexión con Dios y una pasión por ver a otros crecer en su fe.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="trending-item">
-                    <div class="trending__thumb" data-background="<?= base_url('assets/img/trending/jhampiernavarro.jpg') ?>"></div>
-                    <div class="trending__info">
-                        <span class="trending__title">Evangelista</span>
-                        <div class="trending__content">
-                            <h4><a>Jhampier Navarro</a></h4>
-                            <p>Jhampier Navarro es un evangelista apasionado y un comunicador efectivo del mensaje de Cristo. Su ministerio se centra en la predicación y la enseñanza, buscando impactar vidas a través de la Palabra de Dios.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="trending-item">
-                    <div class="trending__thumb" data-background="<?= base_url('assets/img/trending/yonatanbecerra.jpg') ?>"></div>
-                    <div class="trending__info">
-                        <span class="trending__title">Profeta</span>
-                        <div class="trending__content">
-                            <h4><a>Yonatan Becerra</a></h4>
-                            <p>Yonatan Becerra es un profeta y líder espiritual con un llamado a la intercesión y la enseñanza. Su ministerio se caracteriza por una profunda conexión con Dios y una pasión por ver a otros crecer en su fe.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="trending-item">
-                    <div class="trending__thumb" data-background="<?= base_url('assets/img/trending/andrewsalazar.jpg') ?>"></div>
-                    <div class="trending__info">
-                        <span class="trending__title">Pastor</span>
-                        <div class="trending__content">
-                            <h4><a>Andrew Salazar</a></h4>
-                            <p>Pastor y Salmista, es un líder cristiano dinámico que combina el pastorado con un don artístico para la alabanza. Su ministerio se desarrolla en dos pilares fundamentales: el pastoreo de la juventud y el liderazgo en la adoración.</p>
-                        </div>
-                    </div>
-                </div>
+                </article>
+                <article>
+                    <p class="cthiu">
+                        <svg class="c6twd c7xe2" style="display: inline;" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                            <path fill-opacity=".48" d="M19 8h5v2h-5V8Zm-4 5h9v2h-9v-2Zm9 5H11v2h13v-2Z"></path>
+                            <path
+                                d="M19.406 3.844 6.083 20.497.586 15 2 13.586l3.917 3.917L17.844 2.595l1.562 1.25Z">
+                            </path>
+                        </svg>&nbsp;&nbsp;
+                        Experiencia probada en empresas MLM de LATAM.
+                    </p>
+                </article>
             </div>
         </div>
     </div>
 </section>
-<!-- Trending area end -->
-<!-- Popular  area start -->
-<section class="ms-popular__area pt-50 pb-100 fix">
-    <div class="container">
-        <div class="row align-items-end mb-25 bdFadeUp">
-            <div class="col-xl-6 col-lg-6">
-                <div class="section__title-wrapper mb-40 bd-title-anim">
-                    <span class="section__subtitle">Ministerios de Adoración Internacionales en colaboración con más de 20 ministerios del VRAEM.</span>
-                    <h2 class="section__title msg_title">
-                        <span class="active">Concierto de Alabanza y Adoración</span>
-                    </h2>
+
+<!-- Programer access & Clients-->
+<section class="cklw9" id="pricing">
+    <div class="cpqz8 cqv4c cbxke cssij ciqov cltyg cossi" aria-hidden="true">
+        <img class="cwchu" src="<?php echo site_url() . "assets/images/blurred-shape.svg" ?>" width="760"
+            height="668" alt="Blurred shape">
+    </div>
+
+    <div class="cnr4s c1b3v c1nzj cg7lc">
+        <div class="creo4 cwt1y c5c70 cegiy">
+            <!-- Section header -->
+            <div class="c7bf6 c90dr c1nzj" style="padding-bottom: 5em;">
+                <div
+                    class="ckmmd cnsl6 c0u5w chuib czlz1 c93x7 cpodb cqmuf c4sxq cjnt3 c0dcb cuq1a c25pz c2gzf">
+                    <span class="cjdx7 cmgwh csuc4 ctbdc cgrvg c4sxq">Lo más importante</span>
                 </div>
+                <h2 class="cfmhn clkfy ca6xa cmgwh cndaf cgrvg cjy9f czenk cm3px cniu2">
+                    Acceso directo a programadores
+                </h2>
+                <p class="cthiu cby5j">
+                    Comunicación sin intermediarios: accedes al equipo de desarrollo que entiende tu negocio.<br />
+                    Ajustes rápidos y personalizados según tu plan de compensación.<br />
+                    Asesoría constante para optimizar tu estrategia de crecimiento.
+
+                </p>
             </div>
-        </div>
-        <div class="row bdFadeUp">
-            <div class="col-xxl-12">
-                <div class="tab-content" id="nav-tabContent">
-                    <div class="tab-pane fade show active" id="nav-popular-1" role="tabpanel"
-                        aria-labelledby="nav-popular-1-tab" tabindex="0">
-                        <div class="swiper-container ms-popular-active fix">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="ms-popular__item p-relative mb-30">
-                                        <div class="ms-popular__thumb">
-                                            <div class="ms-popular-overlay"></div>
-                                            <a>
-                                                <img src="<?= base_url('assets/img/popular/tdministry.png') ?>"
-                                                    alt="Miniserio TD Ministry">
-                                            </a>
-                                            <a class="ms-popular__link">
-                                                <span class="ms-popular-icon"><i
-                                                        class="fa-regular fa-arrow-right-long"></i></span>
-                                            </a>
-                                        </div>
-                                        <h4 class="ms-popular__title">
-                                            <a>TD Ministry</a>
-                                        </h4>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="ms-popular__item p-relative mb-30">
-                                        <div class="ms-popular__thumb">
-                                            <div class="ms-popular-overlay"></div>
-                                            <a>
-                                                <img src="<?= base_url('assets/img/popular/vinonuevo.png') ?>"
-                                                    alt="Ministerio Vino Nuevo">
-                                            </a>
-                                            <a class="ms-popular__link">
-                                                <span class="ms-popular-icon"><i
-                                                        class="fa-regular fa-arrow-right-long"></i></span>
-                                            </a>
-                                        </div>
-                                        <h4 class="ms-popular__title">
-                                            <a>Ministerio Vino Nuevo</a>
-                                        </h4>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="ms-popular__item p-relative mb-30">
-                                        <div class="ms-popular__thumb">
-                                            <div class="ms-popular-overlay"></div>
-                                            <a>
-                                                <img src="<?= base_url('assets/img/popular/reydepaz.png') ?>"
-                                                    alt="Ministerio Rey de Paz">
-                                            </a>
-                                            <a class="ms-popular__link">
-                                                <span class="ms-popular-icon"><i
-                                                        class="fa-regular fa-arrow-right-long"></i></span>
-                                            </a>
-                                        </div>
-                                        <h4 class="ms-popular__title">
-                                            <a>Ministerio Rey de Paz</a>
-                                        </h4>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="ms-popular__item p-relative mb-30">
-                                        <div class="ms-popular__thumb">
-                                            <div class="ms-popular-overlay"></div>
-                                            <a>
-                                                <img src="<?= base_url('assets/img/popular/reydereyes.png') ?>"
-                                                    alt="Ministerio Rey de Reyes">
-                                            </a>
-                                            <a class="ms-popular__link">
-                                                <span class="ms-popular-icon"><i
-                                                        class="fa-regular fa-arrow-right-long"></i></span>
-                                            </a>
-                                        </div>
-                                        <h4 class="ms-popular__title">
-                                            <a>Ministerio Rey de Reyes</a>
-                                        </h4>
-                                    </div>
-                                </div>
 
 
-                                <div class="swiper-slide">
-                                    <div class="ms-popular__item p-relative mb-30">
-                                        <div class="ms-popular__thumb">
-                                            <div class="ms-popular-overlay"></div>
-                                            <a>
-                                                <img src="<?= base_url('assets/img/popular/acierlosabiertos.png') ?>"
-                                                    alt="A Cierlos Abiertos">
-                                            </a>
-                                            <a class="ms-popular__link">
-                                                <span class="ms-popular-icon"><i
-                                                        class="fa-regular fa-arrow-right-long"></i></span>
-                                            </a>
-                                        </div>
-                                        <h4 class="ms-popular__title">
-                                            <a>A Cierlos Abiertos</a>
-                                        </h4>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="ms-popular__item p-relative mb-30">
-                                        <div class="ms-popular__thumb">
-                                            <div class="ms-popular-overlay"></div>
-                                            <a>
-                                                <img src="<?= base_url('assets/img/popular/ccvs.png') ?>"
-                                                    alt="Caminando con la voz de Dios">
-                                            </a>
-                                            <a class="ms-popular__link">
-                                                <span class="ms-popular-icon"><i
-                                                        class="fa-regular fa-arrow-right-long"></i></span>
-                                            </a>
-                                        </div>
-                                        <h4 class="ms-popular__title">
-                                            <a>Caminando con la voz de Dios</a>
-                                        </h4>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="ms-popular__item p-relative mb-30">
-                                        <div class="ms-popular__thumb">
-                                            <div class="ms-popular-overlay"></div>
-                                            <a>
-                                                <img
-                                                    src="<?= base_url('assets/img/popular/shalom.png') ?>"
-                                                    alt="Miniserio Rey de Reyes">
-                                            </a>
-                                            <a class="ms-popular__link">
-                                                <span class="ms-popular-icon"><i
-                                                        class="fa-regular fa-arrow-right-long"></i></span>
-                                            </a>
-                                        </div>
-                                        <h4 class="ms-popular__title">
-                                            <a>Ministerio Profético Shalom</a>
-                                        </h4>
-                                    </div>
-                                </div>
+            <section>
+                <div class="cnr4s c1b3v c1nzj cg7lc">
+                    <div class="creo4 c5c70">
+                        <!-- Section header -->
+                        <div class="cwt1y c7bf6 c90dr c1nzj cxbbo" style="padding-top: 3rem;">
+                            <h2 class="cfmhn clkfy ca6xa cmgwh cndaf cgrvg cjy9f czenk cm3px">
+                                Lo que Dicen Nuestros Clientes
+                            </h2>
+                        </div>
 
-                                <div class="swiper-slide">
-                                    <div class="ms-popular__item p-relative mb-30">
-                                        <div class="ms-popular__thumb">
-                                            <div class="ms-popular-overlay"></div>
-                                            <a>
-                                                <img src="<?= base_url('assets/img/popular/losprudentes.png'); ?>" alt="Miniserio Los Prudentes">
-                                            </a>
-                                            <a class="ms-popular__link">
-                                                <span class="ms-popular-icon">
-                                                    <i class="fa-regular fa-arrow-right-long"></i></span>
-                                            </a>
+                        <div>
+                            <!-- Cards -->
+                            <div class="cqjw1 c4t1y c5lqd cs8ye cg5mp c1nzj cjr0o cbb52" data-masonry="">
+                                <!-- Testimonial #1 -->
+                                <article class="cz81t cdoke cthjc cjblw cu25a cc0ec c57u1 ct9h7 cgxs1 chif5 ci31u cu3wb ctjen crbqt chdkf cfh7o cklw9 c7kp8">
+                                    <div class="cgoqt c2vzz csvh0">
+                                        <div>
+                                            <img src="<?php echo site_url() . "assets/images/ki_logo.png" ?>" width="80"
+                                                alt="Kilife Logo">
                                         </div>
-                                        <h4 class="ms-popular__title">
-                                            <a>Los Prudentes</a>
-                                        </h4>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="ms-popular__item p-relative mb-30">
-                                        <div class="ms-popular__thumb">
-                                            <div class="ms-popular-overlay"></div>
-                                            <a>
-                                                <img src="<?= base_url('assets/img/popular/jehovavaronguerrero.png') ?>" alt="Jehová Varon Guerrero">
-                                            </a>
-                                            <a class="ms-popular__link">
-                                                <span class="ms-popular-icon">
-                                                    <i class="fa-regular fa-arrow-right-long"></i>
-                                                </span>
-                                            </a>
+                                        <p class="c9quv ch57t cthiu">
+                                            Kilife ha experimentado mejoras significativas en la gestión de nuestra creciente comunidad desde que implementamos Evox Lab. Pasamos de 500 a 5,000 afiliados sin problemas gracias al sistema.
+                                        </p>
+                                        <div class="cpodb c25pz csvh0">
+                                            <div class="cr6se c25fq c3e84">
+                                                <span>Milton Chávez.</span>
+                                                <span class="cqvkd"> - </span>
+                                                <a class="csmp5 cthiu c22pv">CEO - Kilife</a>
+                                            </div>
                                         </div>
-                                        <h4 class="ms-popular__title">
-                                            <a>Jehová Varon Guerrero</a>
-                                        </h4>
                                     </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="ms-popular__item p-relative mb-30">
-                                        <div class="ms-popular__thumb">
-                                            <div class="ms-popular-overlay"></div>
-                                            <a>
-                                                <img src="<?= base_url('assets/img/popular/linajesdejehova.png') ?>"
-                                                    alt="Miniserio Linajes de Jehova">
-                                            </a>
-                                            <a class="ms-popular__link">
-                                                <span class="ms-popular-icon">
-                                                    <i class="fa-regular fa-arrow-right-long"></i>
-                                                </span>
-                                            </a>
+                                </article>
+                                <!-- Testimonial #2 -->
+                                <article
+                                    class="cz81t cdoke cthjc cjblw cu25a cc0ec c57u1 ct9h7 cgxs1 chif5 ci31u cu3wb ctjen crbqt chdkf cfh7o cklw9 c7kp8" style="margin-top: 0px;">
+                                    <div class="cgoqt c2vzz csvh0">
+                                        <div>
+                                            <img src="<?php echo site_url() . "assets/images/fk_logo.png" ?>" width="80"
+                                                alt="Familia Kaizen Logo">
                                         </div>
-                                        <h4 class="ms-popular__title">
-                                            <a>Linajes de Jehova</a>
-                                        </h4>
+                                        <p class="c9quv ch57t cthiu">
+                                            Como organización enfocada en empoderar a los emprendedores, necesitábamos una plataforma que pudiera manejar las complejidades de nuestra red. Nuestros distribuidores confían más porque ven sus comisiones en tiempo real.
+                                        </p>
+                                        <div class="cpodb c25pz csvh0">
+                                            <div class="cr6se c25fq c3e84">
+                                                <span>Renzo Cuya</span>
+                                                <span class="cqvkd"> - </span>
+                                                <a class="csmp5 cthiu c22pv">CEO de Familia Kaizen</a>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-
+                                </article>
+                                <!-- Testimonial #3 -->
+                                <article class="cz81t cdoke cthjc cjblw cu25a cc0ec c57u1 ct9h7 cgxs1 chif5 ci31u cu3wb ctjen crbqt chdkf cfh7o cklw9 c7kp8" style="margin-top: 0px;">
+                                    <div class="cgoqt c2vzz csvh0">
+                                        <div>
+                                            <img src="<?php echo site_url() . "assets/images/mn_logo.png" ?>" width="80"
+                                                alt="Mundo Network Logo">
+                                        </div>
+                                        <p class="c9quv ch57t cthiu">
+                                            Evox Lab se ha convertido en una parte integral de las operaciones de Mundo Network. Sus completas funciones, en particular para la gestión de la estructura de nuestra red. Hoy dedicamos menos tiempo a Excel y más a crecer.
+                                        </p>
+                                        <div class="cpodb c25pz csvh0">
+                                            <div class="cr6se c25fq c3e84">
+                                                <span>Kevin Yauri.</span>
+                                                <span class="cqvkd"> - </span>
+                                                <a class="csmp5 cthiu c22pv">VP - Mundo Network</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                <!-- Testimonial #4 -->
+                                <article
+                                    class="cz81t cdoke cthjc cjblw cu25a cc0ec c57u1 ct9h7 cgxs1 chif5 ci31u cu3wb ctjen crbqt chdkf cfh7o cklw9 c7kp8" style="margin-top: 0.0000152588px;">
+                                    <div class="cgoqt c2vzz csvh0">
+                                        <div>
+                                            <img src="<?php echo site_url() . "assets/images/alelife_logo.png" ?>" width="80"
+                                                alt="Alelife Logo">
+                                        </div>
+                                        <p class="c9quv ch57t cthiu">
+                                            La escalabilidad de Evox Lab ha sido un cambio radical para Alelife Global a medida que continuamos expandiendo nuestra presencia global. La facturación, que antes era una pesadilla de fin de mes, ahora se genera automáticamente con un solo clic.
+                                        </p>
+                                        <div class="cpodb c25pz csvh0">
+                                            <div class="cr6se c25fq c3e84">
+                                                <span>Alejandro Huamni.</span>
+                                                <span class="cqvkd"> - </span>
+                                                <a class="csmp5 cthiu c22pv">Fundador - Alelife Global</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                <!-- Testimonial #5 -->
+                                <article
+                                    class="cz81t cdoke cthjc cjblw cu25a cc0ec c57u1 ct9h7 cgxs1 chif5 ci31u cu3wb ctjen crbqt chdkf cfh7o cklw9 c7kp8" style="margin-top: -23px;">
+                                    <div class="cgoqt c2vzz csvh0">
+                                        <div>
+                                            <img src="<?php echo site_url() . "assets/images/glowell_logo.png" ?>" width="80" alt="Glowell Life Logo">
+                                        </div>
+                                        <p class="c9quv ch57t cthiu">
+                                            El enfoque de Glowell Life está en el bienestar y la comunidad, y Evox Lab nos ha proporcionado una plataforma confiable y eficiente para gestionar nuestra red y recompensar a nuestros miembros por compartir su pasión.
+                                        </p>
+                                        <div class="cpodb c25pz csvh0">
+                                            <div class="cr6se c25fq c3e84">
+                                                <span>Miguel Trelles.</span>
+                                                <span class="cqvkd"> - </span>
+                                                <a class="csmp5 cthiu c22pv">VP - Glowell Life</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                <!-- Testimonial #6 -->
+                                <article
+                                    class="cz81t cdoke cthjc cjblw cu25a cc0ec c57u1 ct9h7 cgxs1 chif5 ci31u cu3wb ctjen crbqt chdkf cfh7o cklw9 c7kp8" style="margin-top: 0.0000152588px;">
+                                    <div class="cgoqt c2vzz csvh0">
+                                        <div>
+                                            <img src="<?php echo site_url() . "assets/images/gwinners_logo.png" ?>" width="80" alt="Global Winners Logo">
+                                        </div>
+                                        <p class="c9quv ch57t cthiu">
+                                            Nosotros en Global Winners podemos dar fe de su poder y eficiencia en la gestión de un próspero negocio de mercadeo en red. La plataforma ofrece un conjunto completo de herramientas que realmente respaldan el crecimiento y agilizan las operaciones.
+                                        </p>
+                                        <div class="cpodb c25pz csvh0">
+                                            <div class="cr6se c25fq c3e84">
+                                                <span>Isac Condori.</span>
+                                                <span class="cqvkd"> - </span>
+                                                <a class="csmp5 cthiu c22pv">Fundador - Global Winners</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
+
         </div>
     </div>
 </section>
-<!-- Popular  area end -->
-<!-- Contact area start -->
-<section class="ms-contact-area pb-60 pt-50" id="contact">
-    <div class="container">
-        <div class="row align-items-end mb-25 bdFadeUp">
-            <div class="col-lg-12">
-                <div class="section__title-wrapper mb-40 bd-title-anim">
-                    <span class="section__subtitle">Reservar tu Lugar Ahora</span>
-                    <div id="msg-title">
-                        <h2 class="section__title">
-                            ¡Regístrate y Participa por muchos Premios Fantásticos!
-                        </h2>
+
+<!-- Faq -->
+<!-- FAQ Section -->
+<section class="cklw9" id="faq">
+    <div class="cpqz8 cfkn5 cbxke cssij ciqov cah73 cossi cref9" aria-hidden="true">
+        <img class="cwchu" src="<?php echo site_url() . "assets/images/blurred-shape.svg" ?>" width="760"
+            height="668" alt="Blurred shape">
+    </div>
+    <div class="max-w6xl c1b3v c1nzj cg7lc">
+        <div class="cjdx7 cxfsi ct16x cwt1y cegiy">
+            <div class="c7bf6 c90dr c1nzj">
+                <h2 class="cfmhn clkfy ca6xa cmgwh cndaf cgrvg cjy9f czenk cm3px ca3a8" data-aos="fade-up">
+                    Preguntas Frecuentes
+                </h2>
+            </div>
+            <div class="c7bf6 c1nzj faq-accordion c90dr" id="faqAccordion">
+                <?php
+                $faqs = [
+                    [
+                        'q' => '1.	¿En qué se diferencia un software MLM de un ERP?',
+                        'a' => 'El ERP gestiona procesos internos, EVOX gestiona tu red de afiliados y comisiones.'
+                    ],
+                    [
+                        'q' => '2.	¿Puedo usarlo si recién estoy empezando?',
+                        'a' => 'Sí. Desde 300 afiliados ya ves el beneficio y el sistema escala contigo hasta decenas de miles.'
+                    ],
+                    [
+                        'q' => '3.	¿Mis afiliados podrán usarlo en su celular?',
+                        'a' => 'Sí. Cada miembro tiene un panel intuitivo y accesible desde cualquier dispositivo.'
+                    ],
+                    [
+                        'q' => '4.	¿Es seguro para mis datos y los de mis distribuidores?',
+                        'a' => 'Sí. Usamos encriptación y servidores de AWS, Azure y GCP.'
+                    ],
+                    [
+                        'q' => '5.	¿Cuánto tiempo demora la implementación?',
+                        'a' => 'Dependiendo del plan, desde pocas semanas puedes estar operando.'
+                    ],
+                    [
+                        'q' => '6.	¿Tiene un costo oculto?',
+                        'a' => 'No. Cada plan incluye soporte y asesoría. Solo pagas extras si solicitas desarrollos a medida.'
+                    ],
+                    [
+                        'q' => '7.	¿Puedo probar antes de contratar?',
+                        'a' => 'Claro, solicita tu demo gratuita y conoce la plataforma en acción.'
+                    ]
+                ];
+                foreach ($faqs as $i => $faq): ?>
+                    <div class="faq-item" style="border-bottom:1px solid rgb(199 210 254);">
+                        <button class="faq-question cthiucjdx7" type="button" style="width:100%;text-align:left;padding:2rem 0;background:none;border:none;outline:none;cursor:pointer;" aria-expanded="false" aria-controls="faq<?= $i ?>_a" id="faq<?= $i ?>_q">
+                            <?= esc($faq['q']) ?>
+                            <span style="float:right;transition:transform .2s;" class="faq-arrow">&#9660;</span>
+                        </button>
+                        <div class="faq-answer cthiu" id="faq<?= $i ?>_a" style="display:none;padding-bottom:1rem;">
+                            <?= esc($faq['a']) ?>
+                        </div>
                     </div>
-                </div>
+                <?php endforeach; ?>
             </div>
         </div>
-        <div class="row">
-            <div class="col-xl-12">
-                <div class="ms-contact-wrap ms-contact-space mb-70 ms-bg-2">
-                    <form name="form" id="form" action="javascript:void(0);" enctype="multipart/form-data" method="post" class="ms-contact-form" onsubmit="message();">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="ms-input2-box mb-30">
-                                    <input type="text" name="full_name" placeholder="Nombres Completos" required>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="ms-input2-box mb-30">
-                                    <input type="dni" name="dni" placeholder="DNI" minlength="8" maxlength="8" required>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="ms-input2-box mb-30">
-                                    <input type="text" name="phone" placeholder="Teléfono" required>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="ms-input2-box mb-30">
-                                    <input type="email" name="email" placeholder="Correo Electrónico">
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <span style="text-transform: none;">
-                                    <strong>Habrá un sorteo TODOS los días.</strong> Cada uno de los (4) días del evento se seleccionará a un grupo de participantes registrados para el sorteo diario. El Sorteo Final se realizará el día Domingo por la noche, durante la clausura del evento.
-                                    <br /><br />
-                                </span>
-                            </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.faq-question').forEach(function(btn) {
+                btn.addEventListener('click', function() {
+                    var answer = btn.parentElement.querySelector('.faq-answer');
+                    var expanded = btn.getAttribute('aria-expanded') === 'true';
+                    // Close all
+                    document.querySelectorAll('.faq-answer').forEach(function(a) {
+                        a.style.display = 'none';
+                    });
+                    document.querySelectorAll('.faq-question').forEach(function(b) {
+                        b.setAttribute('aria-expanded', 'false');
+                        b.querySelector('.faq-arrow').style.transform = 'rotate(0deg)';
+                    });
+                    // Open if was closed
+                    if (!expanded) {
+                        answer.style.display = 'block';
+                        btn.setAttribute('aria-expanded', 'true');
+                        btn.querySelector('.faq-arrow').style.transform = 'rotate(180deg)';
+                    }
+                });
+            });
+        });
+    </script>
+</section>
 
-                            <div class="col-md-12">
-                                <div class="ms-checkbox">
-                                    <span style="text-transform: none;">Guardar mis datos para el próximo evento.</span>
-                                    <input type="checkbox" checked="checked">
-                                    <span class="checkmark"></span>
-                                </div>
-                                <div class="ms-submit-btn mt-20" style="text-align: center;">
-                                    <button id="submit" class="unfill__btn" type="submit">Registrar</button>
-                                </div>
+<!-- contact -->
+<section class="czijd cklw9" id="contact">
+    <div class="cpqz8 cfkn5 cbxke cssij ciqov cah73 cossi cref9" aria-hidden="true">
+        <img class="cwchu" src="<?php echo site_url() . "assets/images/blurred-shape.svg" ?>" width="760"
+            height="668" alt="Blurred shape">
+    </div>
+    <div class="max-w6xl c1b3v c1nzj cg7lc">
+        <div class="cjdx7 cxfsi ct16x cwt1y cegiy">
+            <div class="c7bf6 c90dr c1nzj">
+                <h2 class="cfmhn clkfy ca6xa cmgwh cndaf cgrvg cjy9f czenk cm3px ca3a8" data-aos="fade-up">
+                    ¿Listo para iniciar tu negocio multinivel?
+                </h2>
+                <div class="">
+                    <!-- Contact form -->
+                    <form name="form_two" id="form_two" class="c1nzj" onsubmit="send_two()" action="javascript:void(0)"
+                        enctype="multipart/form-data" method="post">
+                        <div class="cjc8o">
+                            <div>
+                                <label class="cthiu c25fq c3e84 cqxme cjpk5" for="email"
+                                    style="text-align: left;">Nombre</label>
+                                <input id="name_two" name="name_two" type="text" class="c9vss cuwvd"
+                                    placeholder="Tu nombre y apellido" required>
                             </div>
+                            <div>
+                                <label class="cthiu c25fq c3e84 cqxme cjpk5" for="email"
+                                    style="text-align: left;">Empresa</label>
+                                <input id="company_two" name="company_two" type="text" class="c9vss cuwvd"
+                                    placeholder="Empresa" required>
+                            </div>
+                            <div>
+                                <label class="cthiu c25fq c3e84 cqxme cjpk5" for="email"
+                                    style="text-align: left;">Email</label>
+                                <input id="email_two" name="email_two" type="email" class="c9vss cuwvd"
+                                    placeholder="email@ejemplo.com" required>
+                            </div>
+                            <div>
+                                <label class="cthiu c25fq c3e84 cqxme cjpk5" for="email"
+                                    style="text-align: left;">Teléfono</label>
+                                <input id="phone_two" name="phone_two" type="tel" class="c9vss cuwvd"
+                                    placeholder="+51 987654321" required>
+                            </div>
+                        </div>
+                        <div class="cjc8o caswb">
+                            <button id="submit_two"
+                                class="cjfft c3wrs ctuu0 ccs84 cbip1 csjfu ch2pc ceu05 cuwvd cx2av">
+                                Solicitar demostración gratuita
+                            </button>
+                            <a id="goDemo_two" href="https://demo.evox-lab.com/"
+                                class="cjfft c3wrs cz81t cdoke cthjc c3wrs cjblw cu25a ctuu0 cc0ec ct5xv cu3wb ckbx6 crbqt chdkf cckl9 ch2pc cqb0q cyp9z cklw9 cuwvd cx2av"
+                                style="width: 100%;display:none;background-color: yellow;">
+                                Ver Demo Ahora
+                            </a>
                         </div>
                     </form>
                 </div>
+
+            </div>
+        </div>
+</section>
+
+<!-- Begin footer -->
+<footer>
+    <div class="cnr4s cklw9 c1b3v c1nzj cg7lc">
+        <!-- Footer illustration -->
+        <div class="cpqz8 cfkn5 cbxke cssij ciqov cossi" aria-hidden="true">
+            <img class="cwchu" src="<?php echo site_url() . "assets/images/footer-illustration.svg" ?>" width="1076"
+                height="378" alt="Footer illustration">
+        </div>
+
+        <div class="c90dr c1nzj">
+            <div class="c242q">
+                <div class="c7bf6" style="padding-bottom: 20px;">
+                    <div class="cr6se c25fq c3e84">
+                        <a class="csmp5 cthiu c22pv">&copy; 2025 Evox Lab. Todos los derechos reservados.</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</section>
-<!-- Contact Area Start Here  -->
+</footer>
+<!-- End footer -->
 
 <?= $this->endSection() ?>
