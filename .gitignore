@@ -1,0 +1,22 @@
+# CodeIgniter 4 Specific
+/writable/
+/vendor/
+.env
+/app/Config/Autoload-dev.php
+
+# PHP Specific
+/tests/_support/_generated/
+composer.lock
+/vendor
+/storage
+
+# IDE/OS Specific (Add or remove as needed)
+.idea
+.vscode
+.DS_Store
+Thumbs.db
+
+# Optional: Code Coverage (If running tests)
+/builds/
+
+/history
