@@ -3,8 +3,8 @@
 namespace App\Controllers;
 
 use App\Models\ClientModel;
+use App\Models\UnilevelModel;
 use App\Models\UserModel;
-use App\Models\SurveyModel;
 
 class Home extends BaseController
 {
@@ -13,12 +13,12 @@ class Home extends BaseController
         return view('home');
     }
 
-    public function login(): string    
+    public function login(): string
     {
         return view('login');
     }
 
-    public function thanks(): string    
+    public function thanks(): string
     {
         return view('thanks');
     }
@@ -32,7 +32,7 @@ class Home extends BaseController
         // 1. Verificar que la petición sea POST
         if (!$this->request->is('post')) {
             // Si no es POST, simplemente regresa a la página anterior
-            return redirect()->back(); 
+            return redirect()->back();
         }
 
         // 2. Definir las reglas de validación
@@ -40,7 +40,7 @@ class Home extends BaseController
             'email'     => 'required|valid_email|max_length[100]', // Añadido is_unique
             'password'  => 'required|min_length[3]|max_length[100]', // Añadido
         ];
-        
+
         // 3. Validar los datos
         if (!$this->validate($rules)) {
             // Si la validación falla (usando $this->validate), CodeIgniter maneja
@@ -60,12 +60,12 @@ class Home extends BaseController
             // Si la petición es AJAX, devolvemos el JSON.
             // Si no, podríamos redirigir, pero tu código original devuelve JSON y hace 'exit()'.
             echo json_encode($data);
-            exit(); 
+            exit();
         }
 
         // Obtener los datos del POST
-        $postData = $this->request->getPost(); 
-        
+        $postData = $this->request->getPost();
+
         // Normalizar entrada
         $email = isset($postData['email']) ? trim($postData['email']) : '';
         $password = isset($postData['password']) ? $postData['password'] : '';
@@ -77,8 +77,7 @@ class Home extends BaseController
             $data['status'] = false;
             $data['message'] = 'Usuario no encontrado.';
             echo json_encode($data);
-            exit(); 
-
+            exit();
         } else {
             // Verificar si la cuenta está activa (si aplica)
             if (isset($user['active']) && (int)$user['active'] !== 1) {
@@ -86,8 +85,7 @@ class Home extends BaseController
                 $data['message'] = 'Cuenta no está activa.';
                 $data['status'] = false;
                 echo json_encode($data);
-                exit(); 
-
+                exit();
             } elseif (password_verify($password, $user['password'])) {
                 // Credenciales válidas: establecer sesión
                 $session = session();
@@ -102,7 +100,6 @@ class Home extends BaseController
                 $id = $user['id'];
                 $data['status'] = true;
                 $data['message'] = 'Bienvenido';
-
             } else {
                 $data['status'] = false;
                 $data['message'] = 'Contraseña incorrecta';
@@ -110,28 +107,35 @@ class Home extends BaseController
         }
 
         echo json_encode($data);
-        exit(); 
-
+        exit();
     }
 
     // Nuevo método para manejar el envío del formulario de contacto (POST)
-    public function contact()
+    public function register_action()
     {
 
         // 1. Verificar que la petición sea POST
         if (!$this->request->is('post')) {
             // Si no es POST, simplemente regresa a la página anterior
-            return redirect()->back(); 
+            return redirect()->back();
         }
 
         // 2. Definir las reglas de validación
         $rules = [
-            'full_name' => 'required|min_length[3]|max_length[50]',
-            'dni'       => 'required|min_length[8]|max_length[8]|is_unique[ci_clients.dni]', // Añadido is_unique
-            'phone'     => 'required|numeric|min_length[8]|max_length[20]',
+            'name' => 'required|min_length[3]|max_length[50]',
+            'lastname' => 'required|min_length[3]|max_length[50]',
+            'phone'     => 'required|min_length[6]|max_length[20]',
+            'country'     => 'required',
+            'sponsor' => [
+                'rules'  => 'required|in_list[yes,no]',
+                'errors' => [
+                    'required' => 'Debe seleccionar una opción.',
+                    'in_list'  => 'La opción seleccionada no es válida.'
+                ]
+            ],
             'email'     => 'required|valid_email|max_length[100]|is_unique[ci_clients.email]', // Añadido is_unique
         ];
-        
+
         // 3. Validar los datos
         if (!$this->validate($rules)) {
             // Si la validación falla (usando $this->validate), CodeIgniter maneja
@@ -151,7 +155,7 @@ class Home extends BaseController
             // Si la petición es AJAX, devolvemos el JSON.
             // Si no, podríamos redirigir, pero tu código original devuelve JSON y hace 'exit()'.
             echo json_encode($data);
-            exit(); 
+            exit();
         }
 
         // --- Lógica de Inserción ---
@@ -159,33 +163,77 @@ class Home extends BaseController
         // Instanciamos el modelo DENTRO de la validación, o al principio.
         // Lo dejaremos al principio como en tu código original, pero lo usamos ahora.
         $ClientModel = new ClientModel();
-
+        $UnilevelModel = new UnilevelModel();
         // Obtener los datos del POST
-        $postData = $this->request->getPost(); 
-        
+        $postData = $this->request->getPost();
+        //set var sponsor
+        $sponsor = $postData['sponsor'] === 'yes' ? 1 : 0;
+        //validar Sponsor
+        if ($sponsor == 1) {
+            //insert into unilevel table
+            $sponsor_code = isset($postData['sponsor_code']) ? $postData['sponsor_code'] : '';
+            $sponsor_name = isset($postData['sponsor_name']) ? $postData['sponsor_name'] : '';
+
+            $sponsorClient = $ClientModel->select('id')->where('code', $sponsor_code)->first();
+            $sponsor_unilevel_id = $sponsorClient['id'] ?? null;
+
+            if (!$sponsor_unilevel_id) {
+                $data['status'] = false;
+                $data['message'] = 'Código de patrocinador inválido.';
+                echo json_encode($data);
+                exit();
+            }
+        }
+
         // Crear el array de datos para la base de datos (DB)
         // NOTA: Los nombres de los keys DEBEN coincidir con tus columnas de DB.
         $param = [
             // Normalizar: 'full_name' del formulario -> 'name' en la DB
-            "name"    => $postData['full_name'], 
-            "dni"     => $postData['dni'],
+            "name"    => $postData['name'],
+            "lastname"     => $postData['lastname'],
             "email"   => $postData['email'],
+            "country"   => $postData['country'],
             "phone"   => $postData['phone'],
             // Campos de Control
-            "date"    => date("Y-m-d H:i:s"), // Si usas TimeStamps en el modelo, esto es redundante
             "active"  => '1'
         ];
         // 4. Insertar los datos en la base de datos
         // CI4 Model save() inserta o actualiza automáticamente.
-        // Si tienes la columna 'id' en $param, actualiza; si no, inserta.
         $id = $ClientModel->save($param);
+
+        //actualizar el nuevo codigo del cliente creado
+        $first = mb_strtoupper(mb_substr(trim($postData['name']), 0, 1, 'UTF-8'), 'UTF-8');
+        $last  = mb_strtoupper(mb_substr(trim($postData['lastname']), 0, 1, 'UTF-8'), 'UTF-8');
+        $new_code = $first . $last . '0' . $ClientModel->getInsertID();
+        $ClientModel->update($ClientModel->getInsertID(), ['code' => $new_code]);
 
         // 5. Verificar y devolver respuesta JSON
         if ($id) {
+            // 6.  Verificar si se seleccionó patrocinador y guardar en Unilevel
+            if ($sponsor == 1) {
+                //insert into unilevel table
+                $unilevel_param = [
+                    "client_id"    => $ClientModel->getInsertID(),
+                    "sponsor_id"     => $sponsor_unilevel_id,
+                    "sponsor_code"     => $sponsor_code,
+                    "sponsor_name"     => $sponsor_name
+                ];
+                $UnilevelModel->save($unilevel_param);
 
-            //send email message
-            if($postData['email']){
-                $this->message($postData['full_name'], $postData['email']);
+                //send email message
+                $this->message($postData['name'], $postData['email'], $new_code);
+            } else {
+
+                $unilevel_param = [
+                    "client_id"    => $ClientModel->getInsertID(),
+                    "sponsor_id"     => 1,
+                    "sponsor_code"     => "BR01",
+                    "sponsor_name"     => "Benjamin Romero"
+                ];
+                $UnilevelModel->save($unilevel_param);
+
+                //send email message
+                $this->message($postData['name'], $postData['email'], $new_code);
             }
 
             $data['status'] = true;
@@ -195,90 +243,13 @@ class Home extends BaseController
             $data['status'] = false;
             $data['message'] = 'Ocurrió un error al guardar los datos.';
         }
-        
+
         // Devolver la respuesta JSON y finalizar la ejecución
         echo json_encode($data);
-        exit(); 
+        exit();
     }
 
-    // Nuevo método para manejar el envío del formulario de encuesta (POST)
-    public function survey()
-    {
-        // 1. Verificar que la petición sea POST
-        if (!$this->request->is('post')) {
-            // Si no es POST, simplemente regresa a la página anterior
-            return redirect()->back(); 
-        }
-
-        // 2. Definir las reglas de validación
-        $rules = [
-            'preacher' => 'required|min_length[3]|max_length[255]',
-            'ministry_music'       => 'required|min_length[3]|max_length[255]|', // Añadido is_unique
-        ];
-        
-        // 3. Validar los datos
-        if (!$this->validate($rules)) {
-            // Si la validación falla (usando $this->validate), CodeIgniter maneja
-            // automáticamente la redirección con los errores y los datos antiguos
-
-            // Obtener el array asociativo de errores (ej: ['dni' => 'El campo DNI es obligatorio.'])
-            $validationErrors = $this->validator->getErrors();
-            // Unir todos los mensajes de error en una sola cadena HTML
-            // Esto es ideal para mostrarlo en una sola notificación Toastr
-            $errorMessage = implode('<br>', $validationErrors);
-
-            $data = [
-                'status' => false,
-                // Usamos getErrors() para obtener el array de errores
-                'message' => $errorMessage
-            ];
-            // Si la petición es AJAX, devolvemos el JSON.
-            // Si no, podríamos redirigir, pero tu código original devuelve JSON y hace 'exit()'.
-            echo json_encode($data);
-            exit(); 
-        }
-
-        // --- Lógica de Inserción ---
-
-        // Instanciamos el modelo DENTRO de la validación, o al principio.
-        // Lo dejaremos al principio como en tu código original, pero lo usamos ahora.
-        $SurveyModel = new SurveyModel();
-
-        // Obtener los datos del POST
-        $postData = $this->request->getPost(); 
-        
-        // Crear el array de datos para la base de datos (DB)
-        // NOTA: Los nombres de los keys DEBEN coincidir con tus columnas de DB.
-        $param = [
-            // Normalizar: 'full_name' del formulario -> 'name' en la DB
-            "preacher"    => $postData['preacher'], 
-            "ministry_music"     => $postData['ministry_music'],
-        ];
-        // 4. Insertar los datos en la base de datos
-        // CI4 Model save() inserta o actualiza automáticamente.
-        // Si tienes la columna 'id' en $param, actualiza; si no, inserta.
-        $id = $SurveyModel->save($param);
-
-        // 5. Verificar y devolver respuesta JSON
-        if ($id) {
-            //send email message
-
-
-
-            $data['status'] = true;
-            $data['message'] = '¡Gracias por participar!';
-        } else {
-            // Si save() falla por alguna razón (ej. error de DB), $id es falso.
-            $data['status'] = false;
-            $data['message'] = 'Ocurrió un error al guardar los datos.';
-        }
-        
-        // Devolver la respuesta JSON y finalizar la ejecución
-        echo json_encode($data);
-        exit(); 
-    }
-
-    public function message($name, $email_customer)
+    public function message($name, $email_customer, $new_code)
     {
         $mensaje = wordwrap("<html>
         <table width='750' border='0' align='center' cellpadding='0' cellspacing='0' bgcolor='#f8f6f7' style='padding:15px 75px 15px'>
@@ -308,7 +279,12 @@ class Home extends BaseController
                     </tr>
                     <tr>
                       <td style='color:#485360;padding:0 0 15px;font:20px Arial;padding:0 7%;text-align:center'>
-                        <b>Su registro para el Mega Evento Evangelístico en Pichari - Vraem se ha completado correctamente. Lo esperamos con muchas ansias.</b>
+                        <b>Su registro para El secreto de Ikimo se ha completado correctamente. Lo esperamos con muchas ansias.</b>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style='font:20px Arial;padding:0 0 15px;color:#485360;text-align:center'>
+                        Sú código de patrocinador es: $new_code,                                
                       </td>
                     </tr>
                     <tr>
@@ -319,9 +295,9 @@ class Home extends BaseController
 
         //set data to send email
         $email = \Config\Services::email();
-        $email->setFrom("system@avivamientoperug3.com", "Registro exitoso");
+        $email->setFrom("system@elsecretodeikimo.info", "Registro exitoso");
         $email->setTo($email_customer);
-        $email->setSubject("Mega Evento Evangelístico en Pichari - Vraem | del 11 al 14 DIC");
+        $email->setSubject("Bienvenido al Secreto de Ikimo");
         $email->setMailType('html');
         $email->setMessage($mensaje);
         $email->send();

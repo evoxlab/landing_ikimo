@@ -6,10 +6,11 @@ use CodeIgniter\Router\RouteCollection;
  * @var RouteCollection $routes
  */
 $routes->get('/', 'Home::index');
-$routes->get('iniciar-sesion', 'Home::login');
-$routes->post('login', 'Home::login_action');
-$routes->get('gracias', 'Home::thanks');
-$routes->post('contact', 'Home::contact');
+$routes->post('registro', 'Home::register_action');
+
+#$routes->get('iniciar-sesion', 'Home::login');
+#$routes->post('login', 'Home::login_action');
+
 $routes->post('survey', 'Home::survey');
 
 $routes->get('dashboard', 'Dashboard::index');

@@ -341,19 +341,23 @@ Ikimo
                 </h2>
                 <div class="">
                     <!-- Contact form -->
-                    <form name="form_two" id="form_two" class="c1nzj" onsubmit="send_two()" action="javascript:void(0)" enctype="multipart/form-data" method="post">
+                    <form name="form" id="form" class="c1nzj" onsubmit="send()" action="javascript:void(0)" enctype="multipart/form-data" method="post">
                         <div class="cjc8o">
                             <div>
-                                <label class="cthiu c25fq c3e84 cqxme cjpk5" for="email" style="text-align: left;">Nombres y Apellidos</label>
-                                <input id="name_two" name="name_two" type="text" class="c9vss cuwvd" placeholder="Tu nombre y apellido" required="">
+                                <label class="cthiu c25fq c3e84 cqxme cjpk5" for="name" style="text-align: left;">Nombres</label>
+                                <input id="name" name="name" type="text" class="c9vss cuwvd" placeholder="Ingrese su nombre" required="">
+                            </div>
+                            <div>
+                                <label class="cthiu c25fq c3e84 cqxme cjpk5" for="lastname" style="text-align: left;">Apellidos</label>
+                                <input id="lastname" name="lastname" type="text" class="c9vss cuwvd" placeholder="Ingrese su apellido" required="">
                             </div>
                             <div>
                                 <label class="cthiu c25fq c3e84 cqxme cjpk5" for="email" style="text-align: left;">Email</label>
-                                <input id="email_two" name="email_two" type="email" class="c9vss cuwvd" placeholder="email@ejemplo.com" required="">
+                                <input id="email" name="email" type="email" class="c9vss cuwvd" placeholder="email@ejemplo.com" required="">
                             </div>
                             <div>
-                                <label class="cthiu c25fq c3e84 cqxme cjpk5" for="country_two" style="text-align: left;">País</label>
-                                <select id="country_two" name="country_two" class="c9vss cuwvd" style="background-color: #1a1a1a; color: #ffffff;" required="">
+                                <label class="cthiu c25fq c3e84 cqxme cjpk5" for="country" style="text-align: left;">País</label>
+                                <select id="country" name="country" class="c9vss cuwvd" style="background-color: #1a1a1a; color: #ffffff;" required="">
                                     <option style="background-color: #1a1a1a; color: #ffffff;" required="" value="">Selecciona tu país</option>
                                     <option style="background-color: #1a1a1a; color: #ffffff;" required="" value="AR">🇦🇷 Argentina</option>
                                     <option style="background-color: #1a1a1a; color: #ffffff;" required="" value="BO">🇧🇴 Bolivia</option>
@@ -378,8 +382,8 @@ Ikimo
                                 </select>
                             </div>
                             <div>
-                                <label class="cthiu c25fq c3e84 cqxme cjpk5" for="email" style="text-align: left;">Teléfono</label>
-                                <input id="phone_two" name="phone_two" type="tel" class="c9vss cuwvd" placeholder="Ej: +51 987654321" pattern="^\+\d{1,3}\s\d{1,14}$" required="">
+                                <label class="cthiu c25fq c3e84 cqxme cjpk5" for="phone" style="text-align: left;">Teléfono</label>
+                                <input id="phone" name="phone" type="tel" class="c9vss cuwvd" placeholder="Ej: +51 987654321" pattern="^\+\d{1,3}\s\d{1,14}$" required="">
                             </div>
                             <div>
                                 <label class="cthiu c25fq c3e84 cqxme cjpk5" for="email" style="text-align: left;">¿Tiene Sponsor?</label>
@@ -392,227 +396,59 @@ Ikimo
                             </div>
                             <div id="sponsor_details" style="display: none;">
                                 <div>
-                                    <label class="cthiu c25fq c3e84 cqxme cjpk5" for="email" style="text-align: left;">Ingrese Código</label>
-                                    <input id="email_two" name="email_two" type="text" class="c9vss cuwvd" placeholder="RC01" required="">
+                                    <label class="cthiu c25fq c3e84 cqxme cjpk5" for="sponsor_code" style="text-align: left;">Ingrese Código</label>
+                                    <input id="sponsor_code" name="sponsor_code" type="text" class="c9vss cuwvd" placeholder="RC01" required="">
                                 </div>
                                 <div>
-                                    <label class="cthiu c25fq c3e84 cqxme cjpk5" for="email" style="text-align: left;">Nombre del Sponsor</label>
-                                    <input id="email_two" name="email_two" type="text" class="c9vss cuwvd" placeholder="Aparecerá el nombred del Sponsor" required="">
+                                    <label class="cthiu c25fq c3e84 cqxme cjpk5" for="sponsor_name" style="text-align: left;">Nombre del Sponsor</label>
+                                    <input id="sponsor_name" name="sponsor_name" type="text" class="c9vss cuwvd" placeholder="Aparecerá el nombred del Sponsor" required="">
                                 </div>
                             </div>
                         </div>
                         <div class="cjc8o caswb">
-                            <button id="submit_two" class="cjfft c3wrs ctuu0 ccs84 cbip1 csjfu ch2pc ceu05 cuwvd cx2av">
+                            <button id="submit" class="cjfft c3wrs ctuu0 ccs84 cbip1 csjfu ch2pc ceu05 cuwvd cx2av">
                                 Registrarme Ahora
                             </button>
-                            <a id="goDemo_two" href="https://demo.evox-lab.com/" class="cjfft c3wrs cz81t cdoke cthjc c3wrs cjblw cu25a ctuu0 cc0ec ct5xv cu3wb ckbx6 crbqt chdkf cckl9 ch2pc cqb0q cyp9z cklw9 cuwvd cx2av" style="width: 100%;display:none;background-color: yellow;">
-                                Ver Demo Ahora
-                            </a>
                         </div>
                     </form>
                 </div>
             </div>
-
-
-            <section>
-                <div class="cnr4s c1b3v c1nzj cg7lc">
-                    <div class="creo4 c5c70">
-                        <!-- Section header -->
-                        <div class="cwt1y c7bf6 c90dr c1nzj cxbbo" style="padding-top: 3rem;">
-                            <h2 class="cfmhn clkfy ca6xa cmgwh cndaf cgrvg cjy9f czenk cm3px">
-                                Lo que Dicen Nuestros Clientes
-                            </h2>
-                        </div>
-
-                        <div>
-                            <!-- Cards -->
-                            <div class="cqjw1 c4t1y c5lqd cs8ye cg5mp c1nzj cjr0o cbb52" data-masonry="">
-                                <!-- Testimonial #1 -->
-                                <article class="cz81t cdoke cthjc cjblw cu25a cc0ec c57u1 ct9h7 cgxs1 chif5 ci31u cu3wb ctjen crbqt chdkf cfh7o cklw9 c7kp8">
-                                    <div class="cgoqt c2vzz csvh0">
-                                        <div>
-                                            <img src="<?php echo site_url() . "assets/images/ki_logo.png" ?>" width="80"
-                                                alt="Kilife Logo">
-                                        </div>
-                                        <p class="c9quv ch57t cthiu">
-                                            Kilife ha experimentado mejoras significativas en la gestión de nuestra creciente comunidad desde que implementamos Evox Lab. Pasamos de 500 a 5,000 afiliados sin problemas gracias al sistema.
-                                        </p>
-                                        <div class="cpodb c25pz csvh0">
-                                            <div class="cr6se c25fq c3e84">
-                                                <span>Milton Chávez.</span>
-                                                <span class="cqvkd"> - </span>
-                                                <a class="csmp5 cthiu c22pv">CEO - Kilife</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </article>
-                                <!-- Testimonial #2 -->
-                                <article
-                                    class="cz81t cdoke cthjc cjblw cu25a cc0ec c57u1 ct9h7 cgxs1 chif5 ci31u cu3wb ctjen crbqt chdkf cfh7o cklw9 c7kp8" style="margin-top: 0px;">
-                                    <div class="cgoqt c2vzz csvh0">
-                                        <div>
-                                            <img src="<?php echo site_url() . "assets/images/fk_logo.png" ?>" width="80"
-                                                alt="Familia Kaizen Logo">
-                                        </div>
-                                        <p class="c9quv ch57t cthiu">
-                                            Como organización enfocada en empoderar a los emprendedores, necesitábamos una plataforma que pudiera manejar las complejidades de nuestra red. Nuestros distribuidores confían más porque ven sus comisiones en tiempo real.
-                                        </p>
-                                        <div class="cpodb c25pz csvh0">
-                                            <div class="cr6se c25fq c3e84">
-                                                <span>Renzo Cuya</span>
-                                                <span class="cqvkd"> - </span>
-                                                <a class="csmp5 cthiu c22pv">CEO de Familia Kaizen</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </article>
-                                <!-- Testimonial #3 -->
-                                <article class="cz81t cdoke cthjc cjblw cu25a cc0ec c57u1 ct9h7 cgxs1 chif5 ci31u cu3wb ctjen crbqt chdkf cfh7o cklw9 c7kp8" style="margin-top: 0px;">
-                                    <div class="cgoqt c2vzz csvh0">
-                                        <div>
-                                            <img src="<?php echo site_url() . "assets/images/mn_logo.png" ?>" width="80"
-                                                alt="Mundo Network Logo">
-                                        </div>
-                                        <p class="c9quv ch57t cthiu">
-                                            Evox Lab se ha convertido en una parte integral de las operaciones de Mundo Network. Sus completas funciones, en particular para la gestión de la estructura de nuestra red. Hoy dedicamos menos tiempo a Excel y más a crecer.
-                                        </p>
-                                        <div class="cpodb c25pz csvh0">
-                                            <div class="cr6se c25fq c3e84">
-                                                <span>Kevin Yauri.</span>
-                                                <span class="cqvkd"> - </span>
-                                                <a class="csmp5 cthiu c22pv">VP - Mundo Network</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </article>
-                                <!-- Testimonial #4 -->
-                                <article
-                                    class="cz81t cdoke cthjc cjblw cu25a cc0ec c57u1 ct9h7 cgxs1 chif5 ci31u cu3wb ctjen crbqt chdkf cfh7o cklw9 c7kp8" style="margin-top: 0.0000152588px;">
-                                    <div class="cgoqt c2vzz csvh0">
-                                        <div>
-                                            <img src="<?php echo site_url() . "assets/images/alelife_logo.png" ?>" width="80"
-                                                alt="Alelife Logo">
-                                        </div>
-                                        <p class="c9quv ch57t cthiu">
-                                            La escalabilidad de Evox Lab ha sido un cambio radical para Alelife Global a medida que continuamos expandiendo nuestra presencia global. La facturación, que antes era una pesadilla de fin de mes, ahora se genera automáticamente con un solo clic.
-                                        </p>
-                                        <div class="cpodb c25pz csvh0">
-                                            <div class="cr6se c25fq c3e84">
-                                                <span>Alejandro Huamni.</span>
-                                                <span class="cqvkd"> - </span>
-                                                <a class="csmp5 cthiu c22pv">Fundador - Alelife Global</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </article>
-                                <!-- Testimonial #5 -->
-                                <article
-                                    class="cz81t cdoke cthjc cjblw cu25a cc0ec c57u1 ct9h7 cgxs1 chif5 ci31u cu3wb ctjen crbqt chdkf cfh7o cklw9 c7kp8" style="margin-top: -23px;">
-                                    <div class="cgoqt c2vzz csvh0">
-                                        <div>
-                                            <img src="<?php echo site_url() . "assets/images/glowell_logo.png" ?>" width="80" alt="Glowell Life Logo">
-                                        </div>
-                                        <p class="c9quv ch57t cthiu">
-                                            El enfoque de Glowell Life está en el bienestar y la comunidad, y Evox Lab nos ha proporcionado una plataforma confiable y eficiente para gestionar nuestra red y recompensar a nuestros miembros por compartir su pasión.
-                                        </p>
-                                        <div class="cpodb c25pz csvh0">
-                                            <div class="cr6se c25fq c3e84">
-                                                <span>Miguel Trelles.</span>
-                                                <span class="cqvkd"> - </span>
-                                                <a class="csmp5 cthiu c22pv">VP - Glowell Life</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </article>
-                                <!-- Testimonial #6 -->
-                                <article
-                                    class="cz81t cdoke cthjc cjblw cu25a cc0ec c57u1 ct9h7 cgxs1 chif5 ci31u cu3wb ctjen crbqt chdkf cfh7o cklw9 c7kp8" style="margin-top: 0.0000152588px;">
-                                    <div class="cgoqt c2vzz csvh0">
-                                        <div>
-                                            <img src="<?php echo site_url() . "assets/images/gwinners_logo.png" ?>" width="80" alt="Global Winners Logo">
-                                        </div>
-                                        <p class="c9quv ch57t cthiu">
-                                            Nosotros en Global Winners podemos dar fe de su poder y eficiencia en la gestión de un próspero negocio de mercadeo en red. La plataforma ofrece un conjunto completo de herramientas que realmente respaldan el crecimiento y agilizan las operaciones.
-                                        </p>
-                                        <div class="cpodb c25pz csvh0">
-                                            <div class="cr6se c25fq c3e84">
-                                                <span>Isac Condori.</span>
-                                                <span class="cqvkd"> - </span>
-                                                <a class="csmp5 cthiu c22pv">Fundador - Global Winners</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </article>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
         </div>
     </div>
 </section>
+<script>
+    const radioSi = document.getElementById('sponsor_yes'); // Asume que tienes un ID para el radio "Sí"
+    const radioNo = document.getElementById('sponsor_no'); // Asume que tienes un ID para el radio "No"
+    const sponsorFieldsContainer = document.getElementById('sponsor_details'); // Contenedor de los inputs
+    const sponsorCodeInput = document.getElementById('sponsor_code');
+    const sponsorNameInput = document.getElementById('sponsor_name');
+    function toggleSponsorFields() {
+        if (radioSi.checked) {
+            // Opción "Sí": Muestra los campos y los hace requeridos
+            sponsorFieldsContainer.style.display = 'block';
+            sponsorCodeInput.required = true;
+            sponsorNameInput.required = true;
 
+        } else if (radioNo.checked) {
+            // Opción "No": Oculta los campos y ELIMINA el atributo required
+            sponsorFieldsContainer.style.display = 'none';
+            sponsorCodeInput.required = false;
+            sponsorNameInput.required = false;
+
+            // Opcional: Limpia los valores cuando se ocultan
+            sponsorCodeInput.value = '';
+            sponsorNameInput.value = '';
+        }
+    }
+
+    // Escucha los cambios
+    radioSi.addEventListener('change', toggleSponsorFields);
+    radioNo.addEventListener('change', toggleSponsorFields);
+
+    // Ejecuta al inicio por si hay un estado preseleccionado
+    toggleSponsorFields();
+</script>
 <!-- contact -->
-<section class="czijd cklw9" id="contact">
-    <div class="cpqz8 cfkn5 cbxke cssij ciqov cah73 cossi cref9" aria-hidden="true">
-        <img class="cwchu" src="<?php echo site_url() . "assets/images/blurred-shape.svg" ?>" width="760"
-            height="668" alt="Blurred shape">
-    </div>
-    <div class="max-w6xl c1b3v c1nzj cg7lc">
-        <div class="cjdx7 cxfsi ct16x cwt1y cegiy">
-            <div class="c7bf6 c90dr c1nzj">
-                <h2 class="cfmhn clkfy ca6xa cmgwh cndaf cgrvg cjy9f czenk cm3px ca3a8" data-aos="fade-up">
-                    ¿Listo para iniciar tu negocio multinivel?
-                </h2>
-                <div class="">
-                    <!-- Contact form -->
-                    <form name="form_two" id="form_two" class="c1nzj" onsubmit="send_two()" action="javascript:void(0)"
-                        enctype="multipart/form-data" method="post">
-                        <div class="cjc8o">
-                            <div>
-                                <label class="cthiu c25fq c3e84 cqxme cjpk5" for="email"
-                                    style="text-align: left;">Nombre</label>
-                                <input id="name_two" name="name_two" type="text" class="c9vss cuwvd"
-                                    placeholder="Tu nombre y apellido" required>
-                            </div>
-                            <div>
-                                <label class="cthiu c25fq c3e84 cqxme cjpk5" for="email"
-                                    style="text-align: left;">Empresa</label>
-                                <input id="company_two" name="company_two" type="text" class="c9vss cuwvd"
-                                    placeholder="Empresa" required>
-                            </div>
-                            <div>
-                                <label class="cthiu c25fq c3e84 cqxme cjpk5" for="email"
-                                    style="text-align: left;">Email</label>
-                                <input id="email_two" name="email_two" type="email" class="c9vss cuwvd"
-                                    placeholder="email@ejemplo.com" required>
-                            </div>
-                            <div>
-                                <label class="cthiu c25fq c3e84 cqxme cjpk5" for="email"
-                                    style="text-align: left;">Teléfono</label>
-                                <input id="phone_two" name="phone_two" type="tel" class="c9vss cuwvd"
-                                    placeholder="+51 987654321" required>
-                            </div>
-                        </div>
-                        <div class="cjc8o caswb">
-                            <button id="submit_two"
-                                class="cjfft c3wrs ctuu0 ccs84 cbip1 csjfu ch2pc ceu05 cuwvd cx2av">
-                                Solicitar demostración gratuita
-                            </button>
-                            <a id="goDemo_two" href="https://demo.evox-lab.com/"
-                                class="cjfft c3wrs cz81t cdoke cthjc c3wrs cjblw cu25a ctuu0 cc0ec ct5xv cu3wb ckbx6 crbqt chdkf cckl9 ch2pc cqb0q cyp9z cklw9 cuwvd cx2av"
-                                style="width: 100%;display:none;background-color: yellow;">
-                                Ver Demo Ahora
-                            </a>
-                        </div>
-                    </form>
-                </div>
-
-            </div>
-        </div>
-</section>
-
 <!-- Begin footer -->
 <footer>
     <div class="cnr4s cklw9 c1b3v c1nzj cg7lc">

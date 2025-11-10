@@ -15,8 +15,8 @@ class ClientModel extends Model
     protected $allowedFields    = [
         'name',
         'lastname',
-        'dni',
-        'address',
+        'code',
+        'country',
         'phone',
         'email',
     ];

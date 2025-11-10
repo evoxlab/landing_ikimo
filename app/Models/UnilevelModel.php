@@ -4,17 +4,19 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class SurveyModel extends Model
+class UnilevelModel extends Model
 {
-    protected $table            = 'ci_survey';
+    protected $table            = 'ci_unilevels';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
     protected $allowedFields    = [
-        'preacher',
-        'ministry_music',
+        'client_id',
+        'sponsor_id',
+        'sponsor_code',
+        'sponsor_name',
     ];
 
     protected bool $allowEmptyInserts = false;
