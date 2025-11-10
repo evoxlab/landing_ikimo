@@ -7,11 +7,47 @@ Ikimo
 <?= $this->section('content') ?>
 
 <!-- Page illustration -->
-<div class="cpqz8 ccj7j cbxke cssij cf7dm cossi" aria-hidden="true">
-    <img class="cwchu" src="<?php echo base_url('assets/images/page-illustration.svg')?>" width="846"
-        height="594" alt="Page illustration">
-</div>
-<!-- Hero -->
+<style>
+    .hero-bg-1 {
+        background-image: url('<?= base_url('assets/images/bg/bg1.png') ?>');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        /* good for small screens */
+
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        margin-top: -80px;
+    }
+
+    /* On large desktops show the whole image (no cropping) */
+    @media (min-width: 1200px) {
+        .hero-bg-1 {
+            background-size: cover;
+            background-position: center top;
+            min-height: 100vh;
+            margin-top: -80px;
+        }
+    }
+</style>
+
+<section class="hero-bg-1 contenedor-imagen-ikimo">
+    <div class="cnr4s c1b3v c1nzj cg7lc" style="margin-top: auto;">
+        <div class="cwt1y cegiy" style="display: flex; flex-wrap: wrap; align-items: center; gap: 2rem;">
+            <!-- Parte Derecha -->
+            <div style="flex: 1 1 320px; min-width: 280px; display: flex; flex-direction: column; align-items: center;">
+                <div class="cjc8o caswb">
+                    <a id="goDemo"
+                        class="cjfft c3wrs cz81t cdoke cthjc c3wrs cjblw cu25a ctuu0 cc0ec ct5xv cu3wb ckbx6 crbqt chdkf cckl9 ch2pc cqb0q cyp9z cklw9 cuwvd cx2av"
+                        style="width: 100%;text-align: center;background-color: yellow;">¡ Iniciar Aventura FInanciera !</a>
+                </div>
+                <!-- Contact form -->
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Begin cronometro -->
 <section>
     <div class="cnr4s c1b3v c1nzj cg7lc">
         <div class="cwt1y cegiy" style="display: flex; flex-wrap: wrap; align-items: center; gap: 2rem;">
@@ -19,220 +55,271 @@ Ikimo
             <div style="flex: 1 1 320px; min-width: 280px;">
                 <!-- Section header -->
                 <div class="c7bf6">
-                    <h1 class="cfmhn clkfy ca6xa cmgwh cndaf cgrvg cjy9f c8jw0 c370l cm1lk" data-aos="fade-up">
-                        Tu negocio multinivel merece un software de nivel empresarial
+                    <p class="sm:text-xl px-4 max-w-xl mx-auto">
+                        <span>MUY PRONTO</span>
+                    </p>
+                    <!-- CONTADOR DE CUENTA REGRESIVA (NUEVO) -->
+                    <div id="countdown-timer" class="countdown-container">
+                        <!-- Los bloques del contador se insertarán aquí por JavaScript -->
+                    </div>
+
+                    <h1 style="color:#39FF14 !important" class="cfmhn clkfy ca6xa cmgwh cndaf cgrvg cjy9f c8jw0 c370l cm1lk" data-aos="fade-up">
+                        El secreto de IKIMO
                     </h1>
-                    <div class="c90dr c1nzj">
-                        <p class="cthiu cfshg cs7a1" data-aos="fade-up" data-aos-delay="200">
-                            El crecimiento de tu red puede volverse un caos: errores en comisiones, falta de transparencia y pérdida de confianza. Con un software MLM profesional, evitas esos problemas
+
+
+                    <!-- Contenedor del Video Responsivo -->
+                    <!-- Imagen de Vista Previa del Video en la Página --><!-- Usa tu imagen personalizada aquí, por ejemplo: 'ruta/a/tu/imagen_video.jpg' -->
+                    <div id="video-preview-image"
+                        class="page-video-preview"
+                        style="background-image: url('https://placehold.co/600x337/000000/ffffff?text=Tu+Video+Aqui');margin: auto !important;padding-bottom: 48%;"
+                        onclick="openVideoModal()">
+
+                        <!-- Icono de Play de YouTube (SVG) --><svg class="play-icon" viewBox="0 0 68 48" fill="#FF0000">
+                            <path d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.02-7.07C58.85,0.79,53.8,0,50.26,0c-6.71,0-13.43,0-20.14,0C27.91,0.01,23.32,0.76,19.33,2.46C16.8,4.12,15.09,6.6,14.31,9.53C13.53,12.45,13.5,15.75,13.5,19.14c0,3.39,0,6.78,0,10.17c0.03,3.45,0.76,6.86,2.23,9.75c1.55,3.08,3.95,5.43,7.2,6.7c3.78,1.48,7.99,2.22,12.44,2.22c4.45,0,8.66-0.74,12.44-2.22c3.25-1.27,5.65-3.62,7.2-6.7c1.47-2.89,2.2-6.3,2.23-9.75c0-3.39,0-6.78,0-10.17C66.55,15.75,66.52,12.45,66.52,7.74z" fill="#FF0000"></path>
+                            <path d="M45.5,24.8l-12.87,7.28c-0.28,0.16-0.58,0.2-0.86,0.2c-0.29,0-0.57-0.04-0.83-0.12c-0.63-0.25-1.02-0.89-1.02-1.59V19.14c0-0.7,0.39-1.34,1.02-1.59c0.5-0.2,1.07-0.12,1.54,0.12l12.87,7.28C46.39,24.1,46.5,24.3,46.5,24.6C46.5,24.9,46.39,25.1,45.5,24.8z" fill="#FFFFFF"></path>
+                        </svg>
+                    </div>
+
+                    <!-- Descripción del Video/Landing -->
+                    <div class="container">
+                        <p class="description-text sm:text-xl px-4 max-w-xl mx-auto">
+                            La compañía más grande de mercado en red se lanza en pre apertura. El 27 de noviembre Superación personal, Tecnología y Entretenimiento con el Rey de todos los planes de compensación y un liderazgo mundial.
+                            <br><br>
+                            <span style="color:#39FF14">MIRA EL VIDEO HASTA EL FINAL</span>
                         </p>
-                        <p class="cthiu cby5j cxbbo" style="padding-bottom: 1.5rem;">
-                            En EVOX llevamos +8 años desarrollando software multinivel en la nube, con seguridad garantizada en AWS, Azure y Google Cloud.
-                        </p>
+                    </div>
+                </div> <!-- Cierre de background-wrapper --><!-- Modal (Pop-up) para el Video -->
+                <!-- Modal (Pop-up) para el Video -->
+                <div id="video-modal" class="modal-overlay" onclick="closeVideoModal()">
+                    <div class="modal-content" onclick="event.stopPropagation()">
+                        <!-- Botón de cierre -->
+                        <button class="modal-close-btn" onclick="closeVideoModal()">&times;</button>
+                        <!-- Contenedor del video responsivo dentro del modal -->
+                        <div id="modal-video-container" class="video-container-modal">
+                            <!-- El iframe se cargará aquí -->
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!-- Parte Derecha -->
-            <div style="flex: 1 1 320px; min-width: 280px; display: flex; flex-direction: column; align-items: center;">
-                <div
-                    class="ckmmd cnsl6 c0u5w chuib czlz1 c93x7 cpodb cqmuf c4sxq cjnt3 c0dcb cuq1a c25pz c2gzf" style="padding-bottom: 40px;">
-                    <span class="cjdx7 cmgwh csuc4 ctbdc cgrvg c4sxq">Ingresa tus datos y solicita un demo</span>
-                </div>
-                <!-- Contact form -->
-                <form name="form" id="form" class="c1nzj" onsubmit="send()" action="javascript:void(0)"
-                    enctype="multipart/form-data" method="post" style="width: 80%;">
-                    <div class="cjc8o">
-                        <div>
-                            <label class="cthiu c25fq c3e84 cqxme cjpk5" for="email"
-                                style="text-align: left;">Nombre</label>
-                            <input id="name" name="name" type="text" class="c9vss cuwvd"
-                                placeholder="Tu nombre y apellidos" required>
-                        </div>
-                        <div>
-                            <label class="cthiu c25fq c3e84 cqxme cjpk5" for="email"
-                                style="text-align: left;">Empresa</label>
-                            <input id="company" name="company" type="text" class="c9vss cuwvd"
-                                placeholder="Empresa" required>
-                        </div>
-                        <div>
-                            <label class="cthiu c25fq c3e84 cqxme cjpk5" for="email"
-                                style="text-align: left;">Email</label>
-                            <input id="email" name="email" type="email" class="c9vss cuwvd"
-                                placeholder="email@ejemplo.com" required>
-                        </div>
-                        <div>
-                            <label class="cthiu c25fq c3e84 cqxme cjpk5" for="email"
-                                style="text-align: left;">Teléfono</label>
-                            <input id="phone" name="phone" type="tel" class="c9vss cuwvd"
-                                placeholder="+51 987654321" required>
-                        </div>
-                    </div>
-                    <div class="cjc8o caswb">
-                        <button id="submit"
-                            class="cjfft c3wrs ctuu0 ccs84 cbip1 csjfu ch2pc ceu05 cuwvd cx2av">
-                            Solicitar demostración gratuita
-                        </button>
-                        <a id="goDemo" href="https://demo.evox-lab.com/"
-                            class="cjfft c3wrs cz81t cdoke cthjc c3wrs cjblw cu25a ctuu0 cc0ec ct5xv cu3wb ckbx6 crbqt chdkf cckl9 ch2pc cqb0q cyp9z cklw9 cuwvd cx2av"
-                            style="width: 100%;display:none;text-align: center;background-color: yellow;">¡ Ver Demo Ahora !</a>
-                    </div>
-                </form>
+
+                <script>
+                    // ID del video de YouTube que quieres reproducir
+                    const YOUTUBE_VIDEO_ID = 'fAfHrnoDMbU';
+
+                    // --- Referencias a los elementos del DOM ---
+                    const videoPreviewImage = document.getElementById('video-preview-image');
+                    const videoModal = document.getElementById('video-modal');
+                    const modalVideoContainer = document.getElementById('modal-video-container');
+                    const countdownTimer = document.getElementById('countdown-timer');
+
+                    // Fecha y hora objetivo (27 de noviembre de 2025 a las 10:00:00 AM)
+                    // Por favor, ajusta esto si la zona horaria es crítica.
+                    const countdownDate = new Date("Nov 27, 2025 10:00:00").getTime();
+
+                    /**
+                     * Inicializa y actualiza el contador de cuenta regresiva cada segundo.
+                     */
+                    function startCountdown() {
+                        // Actualizar el contador cada 1 segundo
+                        const interval = setInterval(function() {
+
+                            // Obtener la fecha y hora de hoy
+                            const now = new Date().getTime();
+
+                            // Encontrar la distancia entre hoy y la fecha de la cuenta regresiva
+                            const distance = countdownDate - now;
+
+                            // Cálculos de tiempo para días, horas, minutos y segundos
+                            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                            // Función para asegurar que el número tenga dos dígitos (ej. 05 en lugar de 5)
+                            const formatTime = (time) => String(time).padStart(2, '0');
+
+                            // Si la cuenta regresiva aún no ha terminado
+                            if (distance > 0) {
+                                countdownTimer.innerHTML = `
+                                    ${createBlock(formatTime(days), "DAYS")}
+                                    ${createBlock(formatTime(hours), "HOURS")}
+                                    ${createBlock(formatTime(minutes), "MINUTES")}
+                                    ${createBlock(formatTime(seconds), "SECONDS")}
+                                `;
+                            } else {
+                                // Si la cuenta regresiva terminó, limpiar el intervalo y mostrar mensaje
+                                clearInterval(interval);
+                                countdownTimer.innerHTML = '<h2 class="text-3xl font-bold text-center text-green-400">¡LANZAMIENTO EN VIVO AHORA!</h2>';
+                            }
+                        }, 1000);
+                    }
+
+                    /**
+                     * Crea el bloque HTML para un componente de tiempo (Días, Horas, etc.).
+                     * @param {string} value - El valor del tiempo (ej. "07").
+                     * @param {string} label - La etiqueta del tiempo (ej. "DÍAS").
+                     * @returns {string} El HTML del bloque.
+                     */
+                    function createBlock(value, label) {
+                        return `
+                        <div class="countdown-block" style="display: inline-block; margin: 0 10px; text-align: center; min-width: 80px; flex: 1 1 25%;">
+                                <span class="countdown-number" style="display: block; font-size: 2.5rem; font-weight: bold; color: #39FF14;">${value}</span>
+                                <span class="countdown-label" style="display: block; font-size: 0.875rem; color: #fff; margin-top: 5px;">${label}</span>
+                        </div>`;
+                    }
+
+                    // --- Configuración de la imagen de vista previa en la página ---
+                    function setupPreviewImage() {
+                        if (YOUTUBE_VIDEO_ID && videoPreviewImage) {
+                            const thumbnailUrl = `https://img.youtube.com/vi/${YOUTUBE_VIDEO_ID}/hqdefault.jpg`;
+                            videoPreviewImage.style.backgroundImage = `url('${thumbnailUrl}')`;
+                        } else {
+                            console.error("YOUTUBE_VIDEO_ID no está definido.");
+                        }
+                    }
+
+                    /**
+                     * Abre el modal del video y carga el iframe de YouTube.
+                     */
+                    function openVideoModal() {
+                        if (!YOUTUBE_VIDEO_ID) {
+                            console.error("YOUTUBE_VIDEO_ID no está definido.");
+                            return;
+                        }
+
+                        modalVideoContainer.innerHTML = '';
+
+                        const iframeHTML = `
+                <iframe 
+                    src="https://www.youtube.com/embed/${YOUTUBE_VIDEO_ID}?autoplay=1&rel=0&showinfo=0&modestbranding=1" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            `;
+
+                        modalVideoContainer.innerHTML = iframeHTML;
+                        videoModal.classList.add('open');
+                        document.body.style.overflow = 'hidden';
+                    }
+
+                    /**
+                     * Cierra el modal del video y detiene la reproducción.
+                     */
+                    function closeVideoModal() {
+                        videoModal.classList.remove('open');
+                        modalVideoContainer.innerHTML = '';
+                        document.body.style.overflow = '';
+                    }
+
+                    // Cierra el modal si se presiona la tecla ESC
+                    document.addEventListener('keydown', (event) => {
+                        if (event.key === 'Escape' && videoModal.classList.contains('open')) {
+                            closeVideoModal();
+                        }
+                    });
+
+                    // Iniciar todo al cargar la página
+                    window.onload = function() {
+                        setupPreviewImage();
+                        startCountdown(); // Inicia el contador
+                    };
+                </script>
             </div>
         </div>
     </div>
 </section>
-
-<!-- ¿Qué es un software MLM? -->
-<section class="cklw9">
-    <div class="cpqz8 cfkn5 cbxke cssij cxawe cf7dm cossi" aria-hidden="true">
-        <img class="cwchu" src="<?php echo site_url() . "assets/images/blurred-shape-gray.svg" ?>" width="760"
-            height="668" alt="Blurred shape">
-    </div>
-    <div class="co5u0 cpqz8 csuym cbxke cssij ciqov ctn85 cossi" aria-hidden="true">
-        <img class="cwchu" src="<?php echo site_url() . "assets/images/blurred-shape.svg" ?>" width="760"
-            height="668" alt="Blurred shape">
-    </div>
-
+<!-- end cronometro -->
+<!-- Begin pre lanzamiento -->
+<section>
     <div class="cnr4s c1b3v c1nzj cg7lc">
-        <div class="creo4 cwt1y c5c70 cegiy">
+        <div class="creo4 c5c70">
             <!-- Section header -->
-            <div class="c7bf6 c90dr cqzei c1nzj c1fmo" style="max-width: 60rem;">
-                <h2 class="cfmhn clkfy ca6xa cmgwh cndaf cgrvg cjy9f czenk cm3px c1fmo">
-                    ¿Qué es un software MLM?
+            <div class="cwt1y c7bf6 c90dr c1nzj cxbbo" style="padding-top: 3rem;padding-bottom: 0rem;">
+                <h2 style="color: #39FF14 !important" class="cfmhn clkfy ca6xa cmgwh cndaf cgrvg cjy9f czenk cm3px">
+                    Pre lanzamiento mundial <br />27.11.25
                 </h2>
-                <p class="cthiu cby5j cqzei cxbbo">
-                    Un software MLM es la plataforma que organiza y automatiza tu negocio multinivel: gestiona afiliados, calcula comisiones y muestra resultados en tiempo real para la empresa y sus distribuidores.
+            </div>
+            <div class="container">
+                <p class="description-text sm:text-xl px-4 max-w-xl mx-auto">
+                    Si soñaste con ser parte de algo GRANDE ¡esta es tu oportunidad
                 </p>
+            </div>
+            <div class="cwt1y c7bf6 c90dr c1nzj cxbbo" style="padding-top: 0.5rem;">
+                <h2 style="color: white !important" class="cfmhn clkfy ca6xa cmgwh cndaf cgrvg cjy9f czenk cm3px">
+                    4 Industrias en 1
+                </h2>
+            </div>
+            <div>
+                <!-- Cards -->
+                <style>
+                    .grid-12 {
+                        display: grid;
+                        grid-template-columns: repeat(12, minmax(0, 1fr));
+                        gap: 1.25rem;
+                    }
 
-                <div class="c1nzj" style="display: flex; flex-wrap: wrap; gap: 2rem;">
-                    <div style="flex: 1 1 0; min-width: 220px;margin-bottom: -10px;">
-                        <h3 class="cthiu cby5j c336v cndaf cr6se cjy9f cjpk5">
-                            <svg style="margin: auto;  display: initial;" class="c51ou clgbu cynlw cmsi1 c6ulg ceik7" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>
-                            </svg>&nbsp;&nbsp;Crecimiento sin límites
-                        </h3>
-                    </div>
-                    <div style="flex: 1 1 0; min-width: 220px;margin-bottom: -10px;">
-                        <h3 class="cthiu cby5j c336v cndaf cr6se cjy9f cjpk5">
-                            <svg style="margin: auto;  display: initial;" class="c51ou clgbu cynlw cmsi1 c6ulg ceik7" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>
-                            </svg>&nbsp;&nbsp;Comisiones en tiempo real
-                        </h3>
-                    </div>
-                    <div style="flex: 1 1 0; min-width: 220px;margin-bottom: -10px;">
-                        <h3 class="cthiu cby5j c336v cndaf cr6se cjy9f cjpk5">
-                            <svg style="margin: auto;  display: initial;" class="c51ou clgbu cynlw cmsi1 c6ulg ceik7" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>
-                            </svg>&nbsp;&nbsp;Transparencia para cada afiliado
-                        </h3>
-                    </div>
-                    <div style="flex: 1 1 0; min-width: 220px;margin-bottom: -10px;">
-                        <h3 class="cthiu cby5j c336v cndaf cr6se cjy9f cjpk5">
-                            <svg style="margin: auto;  display: initial;" class="c51ou clgbu cynlw cmsi1 c6ulg ceik7" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>
-                            </svg>&nbsp;&nbsp;Bonos configurables que motivan
-                        </h3>
-                    </div>
-                    <div style="flex: 1 1 0; min-width: 220px;margin-bottom: -10px;">
-                        <h3 class="cthiu cby5j c336v cndaf cr6se cjy9f cjpk5">
-                            <svg style="margin: auto;  display: initial;" class="c51ou clgbu cynlw cmsi1 c6ulg ceik7" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>
-                            </svg>&nbsp;&nbsp;Automatización que ahorra tiempo
-                        </h3>
-                    </div>
+                    .grid-12 .col-3 {
+                        grid-column: span 3;
+                    }
+
+                    @media (max-width: 1024px) {
+                        .grid-12 .col-3 {
+                            grid-column: span 6;
+                        }
+                    }
+
+                    @media (max-width: 640px) {
+                        .grid-12 .col-3 {
+                            grid-column: span 12;
+                        }
+                    }
+
+                    .grid-12 img {
+                        width: 100%;
+                        height: auto;
+                        display: block;
+                    }
+                </style>
+
+                <div class="grid-12">
+                    <!-- Item #1 -->
+                    <article class="col-3 cz81t cdoke cthjc cjblw cu25a cc0ec c57u1 ct9h7 cgxs1 chif5 ci31u cu3wb ctjen crbqt chdkf cfh7o cklw9 c7kp8">
+                        <div class="cgoqt c2vzz csvh0">
+                            <div>
+                                <img src="<?php echo site_url() . "assets/images/industrias/gen1.jpg" ?>" alt="Generación 1 Logo">
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Item #2 -->
+                    <article class="col-3 cz81t cdoke cthjc cjblw cu25a cc0ec c57u1 ct9h7 cgxs1 chif5 ci31u cu3wb ctjen crbqt chdkf cfh7o cklw9 c7kp8">
+                        <div class="cgoqt c2vzz csvh0">
+                            <div>
+                                <img src="<?php echo site_url() . "assets/images/industrias/gen2.png" ?>" alt="Generación 2 Logo">
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Item #3 -->
+                    <article class="col-3 cz81t cdoke cthjc cjblw cu25a cc0ec c57u1 ct9h7 cgxs1 chif5 ci31u cu3wb ctjen crbqt chdkf cfh7o cklw9 c7kp8">
+                        <div>
+                            <img src="<?php echo site_url() . "assets/images/industrias/gen3.png" ?>" alt="Generación 3 Logo">
+                        </div>
+                    </article>
+
+                    <!-- Item #4 -->
+                    <article class="col-3 cz81t cdoke cthjc cjblw cu25a cc0ec c57u1 ct9h7 cgxs1 chif5 ci31u cu3wb ctjen crbqt chdkf cfh7o cklw9 c7kp8">
+                        <div>
+                            <img src="<?php echo site_url() . "assets/images/industrias/gen4.png" ?>" alt="Generación 4 Logo">
+                        </div>
+                    </article>
                 </div>
             </div>
         </div>
     </div>
 </section>
-
-<!-- why choose us -->
-<section class="cklw9">
-    <div class="cpqz8 cfkn5 cbxke cssij cxawe cf7dm cossi" aria-hidden="true">
-        <img class="cwchu" src="<?php echo site_url() . "assets/images/blurred-shape-gray.svg" ?>" width="760"
-            height="668" alt="Blurred shape">
-    </div>
-    <div class="co5u0 cpqz8 csuym cbxke cssij ciqov ctn85 cossi" aria-hidden="true">
-        <img class="cwchu" src="<?php echo site_url() . "assets/images/blurred-shape.svg" ?>" width="760"
-            height="668" alt="Blurred shape">
-    </div>
-
-    <div class="cnr4s c1b3v c1nzj cg7lc">
-        <div class="creo4 cwt1y c5c70 cegiy">
-            <!-- Section header -->
-            <div class="c7bf6 c90dr cqzei c1nzj c1fmo">
-                <h2 class="cfmhn clkfy ca6xa cmgwh cndaf cgrvg cjy9f czenk cm3px c1fmo">
-                    ¿Por qué elegirnos?
-                </h2>
-                <p class="cthiu cby5j">
-                    El software que entiende tu negocio de redes.
-                </p>
-            </div>
-
-            <!-- Items -->
-            <div class="cqjw1 c4t1y c5lqd cc219 cvw8b cg5mp c1nzj cxh4o cbb52">
-                <article>
-
-                    <p class="cthiu">
-                        <svg class="c6twd c7xe2" style="display: inline;" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-                            <path d="M0 0h14v17H0V0Zm2 2v13h10V2H2Z"></path>
-                            <path fill-opacity=".48"
-                                d="m16.295 5.393 7.528 2.034-4.436 16.412L5.87 20.185l.522-1.93 11.585 3.132 3.392-12.55-5.597-1.514.522-1.93Z">
-                            </path>
-                        </svg> &nbsp;&nbsp;
-                        Compatible con distintos planes (unilevel, binario, híbrido, matriz).
-                    </p>
-                </article>
-                <article>
-                    <p class="cthiu">
-                        <svg class="c6twd c7xe2" style="display: inline;" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-                            <path fill-opacity=".48" d="M7 8V0H5v8h2Zm12 16v-4h-2v4h2Z"></path>
-                            <path d="M19 6H0v2h17v8H7v-6H5v8h19v-2h-5V6Z"></path>
-                        </svg>&nbsp;&nbsp;
-                        Bonos ilimitados configurables con condicionales.
-                    </p>
-                </article>
-                <article>
-                    <p class="cthiu">
-                        <svg class="c6twd c7xe2" style="display: inline;" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-                            <path
-                                d="M23.414 6 18 .586 16.586 2l3 3H7a6 6 0 0 0-6 6h2a4 4 0 0 1 4-4h12.586l-3 3L18 11.414 23.414 6Z">
-                            </path>
-                            <path fill-opacity=".48"
-                                d="M13.01 12.508a2.5 2.5 0 0 0-3.502.482L1.797 23.16.203 21.952l7.71-10.17a4.5 4.5 0 1 1 7.172 5.437l-4.84 6.386-1.594-1.209 4.841-6.385a2.5 2.5 0 0 0-.482-3.503Z">
-                            </path>
-                        </svg>&nbsp;&nbsp;
-                        Panel intuitivo para distribuidores desde el celular.
-                    </p>
-                </article>
-                <article>
-                    <p class="cthiu">
-                        <svg class="c6twd c7xe2" style="display: inline;" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-                            <path fill-opacity=".48"
-                                d="M12 8.8a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z">
-                            </path>
-                            <path
-                                d="m7.454 2.891.891-.454L7.437.655l-.891.454a12 12 0 0 0 0 21.382l.89.454.91-1.781-.892-.455a10 10 0 0 1 0-17.818ZM17.456 1.11l-.891-.454-.909 1.782.891.454a10 10 0 0 1 0 17.819l-.89.454.908 1.781.89-.454a12 12 0 0 0 0-21.382Z">
-                            </path>
-                        </svg>&nbsp;&nbsp;
-                        Seguridad y escalabilidad en AWS, Azure y GCP.
-                    </p>
-                </article>
-                <article>
-                    <p class="cthiu">
-                        <svg class="c6twd c7xe2" style="display: inline;" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-                            <path fill-opacity=".48" d="M19 8h5v2h-5V8Zm-4 5h9v2h-9v-2Zm9 5H11v2h13v-2Z"></path>
-                            <path
-                                d="M19.406 3.844 6.083 20.497.586 15 2 13.586l3.917 3.917L17.844 2.595l1.562 1.25Z">
-                            </path>
-                        </svg>&nbsp;&nbsp;
-                        Experiencia probada en empresas MLM de LATAM.
-                    </p>
-                </article>
-            </div>
-        </div>
-    </div>
-</section>
+<!-- End pre lanzamiento -->
 
 <!-- Programer access & Clients-->
 <section class="cklw9" id="pricing">
@@ -247,17 +334,83 @@ Ikimo
             <div class="c7bf6 c90dr c1nzj" style="padding-bottom: 5em;">
                 <div
                     class="ckmmd cnsl6 c0u5w chuib czlz1 c93x7 cpodb cqmuf c4sxq cjnt3 c0dcb cuq1a c25pz c2gzf">
-                    <span class="cjdx7 cmgwh csuc4 ctbdc cgrvg c4sxq">Lo más importante</span>
+                    <span class="cjdx7 cmgwh csuc4 ctbdc cgrvg c4sxq">Posiciónate ahora y recibirás beneficios que nadie recibirá en el plan de compensación.</span>
                 </div>
                 <h2 class="cfmhn clkfy ca6xa cmgwh cndaf cgrvg cjy9f czenk cm3px cniu2">
-                    Acceso directo a programadores
+                    Sé el pionero a nivel mundial
                 </h2>
-                <p class="cthiu cby5j">
-                    Comunicación sin intermediarios: accedes al equipo de desarrollo que entiende tu negocio.<br />
-                    Ajustes rápidos y personalizados según tu plan de compensación.<br />
-                    Asesoría constante para optimizar tu estrategia de crecimiento.
-
-                </p>
+                <div class="">
+                    <!-- Contact form -->
+                    <form name="form_two" id="form_two" class="c1nzj" onsubmit="send_two()" action="javascript:void(0)" enctype="multipart/form-data" method="post">
+                        <div class="cjc8o">
+                            <div>
+                                <label class="cthiu c25fq c3e84 cqxme cjpk5" for="email" style="text-align: left;">Nombres y Apellidos</label>
+                                <input id="name_two" name="name_two" type="text" class="c9vss cuwvd" placeholder="Tu nombre y apellido" required="">
+                            </div>
+                            <div>
+                                <label class="cthiu c25fq c3e84 cqxme cjpk5" for="email" style="text-align: left;">Email</label>
+                                <input id="email_two" name="email_two" type="email" class="c9vss cuwvd" placeholder="email@ejemplo.com" required="">
+                            </div>
+                            <div>
+                                <label class="cthiu c25fq c3e84 cqxme cjpk5" for="country_two" style="text-align: left;">País</label>
+                                <select id="country_two" name="country_two" class="c9vss cuwvd" style="background-color: #1a1a1a; color: #ffffff;" required="">
+                                    <option style="background-color: #1a1a1a; color: #ffffff;" required="" value="">Selecciona tu país</option>
+                                    <option style="background-color: #1a1a1a; color: #ffffff;" required="" value="AR">🇦🇷 Argentina</option>
+                                    <option style="background-color: #1a1a1a; color: #ffffff;" required="" value="BO">🇧🇴 Bolivia</option>
+                                    <option style="background-color: #1a1a1a; color: #ffffff;" required="" value="BR">🇧🇷 Brasil</option>
+                                    <option style="background-color: #1a1a1a; color: #ffffff;" required="" value="CL">🇨🇱 Chile</option>
+                                    <option style="background-color: #1a1a1a; color: #ffffff;" required="" value="CO">🇨🇴 Colombia</option>
+                                    <option style="background-color: #1a1a1a; color: #ffffff;" required="" value="CR">🇨🇷 Costa Rica</option>
+                                    <option style="background-color: #1a1a1a; color: #ffffff;" required="" value="EC">🇪🇨 Ecuador</option>
+                                    <option style="background-color: #1a1a1a; color: #ffffff;" required="" value="SV">🇸🇻 El Salvador</option>
+                                    <option style="background-color: #1a1a1a; color: #ffffff;" required="" value="ES">🇪🇸 España</option>
+                                    <options style="background-color: #1a1a1a; color: #ffffff;" required="" value="GT">🇬🇹 Guatemala</option>
+                                        <option style="background-color: #1a1a1a; color: #ffffff;" required="" value="HN">🇭🇳 Honduras</option>
+                                        <option style="background-color: #1a1a1a; color: #ffffff;" required="" value="MX">🇲🇽 México</option>
+                                        <option style="background-color: #1a1a1a; color: #ffffff;" required="" value="NI">🇳🇮 Nicaragua</option>
+                                        <option style="background-color: #1a1a1a; color: #ffffff;" required="" value="PA">🇵🇦 Panamá</option>
+                                        <option style="background-color: #1a1a1a; color: #ffffff;" required="" value="PY">🇵🇾 Paraguay</option>
+                                        <option style="background-color: #1a1a1a; color: #ffffff;" required="" value="PE">🇵🇪 Perú</option>
+                                        <option style="background-color: #1a1a1a; color: #ffffff;" required="" value="DO">🇩🇴 República Dominicana</option>
+                                        <option style="background-color: #1a1a1a; color: #ffffff;" required="" value="UY">🇺🇾 Uruguay</option>
+                                        <option style="background-color: #1a1a1a; color: #ffffff;" required="" value="VE">🇻🇪 Venezuela</option>
+                                        <option style="background-color: #1a1a1a; color: #ffffff;" required="" value="US">🇺🇸 Estados Unidos</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="cthiu c25fq c3e84 cqxme cjpk5" for="email" style="text-align: left;">Teléfono</label>
+                                <input id="phone_two" name="phone_two" type="tel" class="c9vss cuwvd" placeholder="Ej: +51 987654321" pattern="^\+\d{1,3}\s\d{1,14}$" required="">
+                            </div>
+                            <div>
+                                <label class="cthiu c25fq c3e84 cqxme cjpk5" for="email" style="text-align: left;">¿Tiene Sponsor?</label>
+                                <div>
+                                    <input type="radio" id="sponsor_yes" name="sponsor" value="yes" required onclick="document.getElementById('sponsor_details').style.display = 'block';">
+                                    <label for="sponsor_yes">Sí</label>
+                                    <input type="radio" id="sponsor_no" name="sponsor" value="no" required onclick="document.getElementById('sponsor_details').style.display = 'none';">
+                                    <label for="sponsor_no">No</label>
+                                </div>
+                            </div>
+                            <div id="sponsor_details" style="display: none;">
+                                <div>
+                                    <label class="cthiu c25fq c3e84 cqxme cjpk5" for="email" style="text-align: left;">Ingrese Código</label>
+                                    <input id="email_two" name="email_two" type="text" class="c9vss cuwvd" placeholder="RC01" required="">
+                                </div>
+                                <div>
+                                    <label class="cthiu c25fq c3e84 cqxme cjpk5" for="email" style="text-align: left;">Nombre del Sponsor</label>
+                                    <input id="email_two" name="email_two" type="text" class="c9vss cuwvd" placeholder="Aparecerá el nombred del Sponsor" required="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cjc8o caswb">
+                            <button id="submit_two" class="cjfft c3wrs ctuu0 ccs84 cbip1 csjfu ch2pc ceu05 cuwvd cx2av">
+                                Registrarme Ahora
+                            </button>
+                            <a id="goDemo_two" href="https://demo.evox-lab.com/" class="cjfft c3wrs cz81t cdoke cthjc c3wrs cjblw cu25a ctuu0 cc0ec ct5xv cu3wb ckbx6 crbqt chdkf cckl9 ch2pc cqb0q cyp9z cklw9 cuwvd cx2av" style="width: 100%;display:none;background-color: yellow;">
+                                Ver Demo Ahora
+                            </a>
+                        </div>
+                    </form>
+                </div>
             </div>
 
 
@@ -400,92 +553,6 @@ Ikimo
     </div>
 </section>
 
-<!-- Faq -->
-<!-- FAQ Section -->
-<section class="cklw9" id="faq">
-    <div class="cpqz8 cfkn5 cbxke cssij ciqov cah73 cossi cref9" aria-hidden="true">
-        <img class="cwchu" src="<?php echo site_url() . "assets/images/blurred-shape.svg" ?>" width="760"
-            height="668" alt="Blurred shape">
-    </div>
-    <div class="max-w6xl c1b3v c1nzj cg7lc">
-        <div class="cjdx7 cxfsi ct16x cwt1y cegiy">
-            <div class="c7bf6 c90dr c1nzj">
-                <h2 class="cfmhn clkfy ca6xa cmgwh cndaf cgrvg cjy9f czenk cm3px ca3a8" data-aos="fade-up">
-                    Preguntas Frecuentes
-                </h2>
-            </div>
-            <div class="c7bf6 c1nzj faq-accordion c90dr" id="faqAccordion">
-                <?php
-                $faqs = [
-                    [
-                        'q' => '1.	¿En qué se diferencia un software MLM de un ERP?',
-                        'a' => 'El ERP gestiona procesos internos, EVOX gestiona tu red de afiliados y comisiones.'
-                    ],
-                    [
-                        'q' => '2.	¿Puedo usarlo si recién estoy empezando?',
-                        'a' => 'Sí. Desde 300 afiliados ya ves el beneficio y el sistema escala contigo hasta decenas de miles.'
-                    ],
-                    [
-                        'q' => '3.	¿Mis afiliados podrán usarlo en su celular?',
-                        'a' => 'Sí. Cada miembro tiene un panel intuitivo y accesible desde cualquier dispositivo.'
-                    ],
-                    [
-                        'q' => '4.	¿Es seguro para mis datos y los de mis distribuidores?',
-                        'a' => 'Sí. Usamos encriptación y servidores de AWS, Azure y GCP.'
-                    ],
-                    [
-                        'q' => '5.	¿Cuánto tiempo demora la implementación?',
-                        'a' => 'Dependiendo del plan, desde pocas semanas puedes estar operando.'
-                    ],
-                    [
-                        'q' => '6.	¿Tiene un costo oculto?',
-                        'a' => 'No. Cada plan incluye soporte y asesoría. Solo pagas extras si solicitas desarrollos a medida.'
-                    ],
-                    [
-                        'q' => '7.	¿Puedo probar antes de contratar?',
-                        'a' => 'Claro, solicita tu demo gratuita y conoce la plataforma en acción.'
-                    ]
-                ];
-                foreach ($faqs as $i => $faq): ?>
-                    <div class="faq-item" style="border-bottom:1px solid rgb(199 210 254);">
-                        <button class="faq-question cthiucjdx7" type="button" style="width:100%;text-align:left;padding:2rem 0;background:none;border:none;outline:none;cursor:pointer;" aria-expanded="false" aria-controls="faq<?= $i ?>_a" id="faq<?= $i ?>_q">
-                            <?= esc($faq['q']) ?>
-                            <span style="float:right;transition:transform .2s;" class="faq-arrow">&#9660;</span>
-                        </button>
-                        <div class="faq-answer cthiu" id="faq<?= $i ?>_a" style="display:none;padding-bottom:1rem;">
-                            <?= esc($faq['a']) ?>
-                        </div>
-                    </div>
-                <?php endforeach; ?>
-            </div>
-        </div>
-    </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            document.querySelectorAll('.faq-question').forEach(function(btn) {
-                btn.addEventListener('click', function() {
-                    var answer = btn.parentElement.querySelector('.faq-answer');
-                    var expanded = btn.getAttribute('aria-expanded') === 'true';
-                    // Close all
-                    document.querySelectorAll('.faq-answer').forEach(function(a) {
-                        a.style.display = 'none';
-                    });
-                    document.querySelectorAll('.faq-question').forEach(function(b) {
-                        b.setAttribute('aria-expanded', 'false');
-                        b.querySelector('.faq-arrow').style.transform = 'rotate(0deg)';
-                    });
-                    // Open if was closed
-                    if (!expanded) {
-                        answer.style.display = 'block';
-                        btn.setAttribute('aria-expanded', 'true');
-                        btn.querySelector('.faq-arrow').style.transform = 'rotate(180deg)';
-                    }
-                });
-            });
-        });
-    </script>
-</section>
-
 <!-- contact -->
 <section class="czijd cklw9" id="contact">
     <div class="cpqz8 cfkn5 cbxke cssij ciqov cah73 cossi cref9" aria-hidden="true">
@@ -567,5 +634,4 @@ Ikimo
     </div>
 </footer>
 <!-- End footer -->
-
 <?= $this->endSection() ?>

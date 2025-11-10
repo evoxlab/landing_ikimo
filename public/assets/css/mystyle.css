@@ -1,0 +1,410 @@
+/* Base y Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color-dark: #111827; /* Gris muy oscuro/negro */
+    --color-accent: #22d3ee; /* Cian brillante */
+    --color-secondary: #f0f; /* Magenta */
+    --color-light: #f3f4f6;
+    --font-epic: 'Orbitron', sans-serif; /* Fuente tecnológica/futurista */
+    --font-body: 'Roboto', sans-serif;
+    --timing-fast: 0.3s;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Roboto:wght@300;400&display=swap');
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    line-height: 1.6;
+    overflow-x: hidden; /* Previene scroll horizontal por animaciones */
+}
+
+/* --- ESTILOS GENERALES --- */
+
+.dark-bg { background-color: var(--color-dark); }
+.light-bg { background-color: #1f2937; }
+.section-padding { padding: 80px 5%; }
+.text-center { text-align: center; }
+
+h1, h2, h3, h4 {
+    font-family: var(--font-epic);
+    text-transform: uppercase;
+}
+
+.section-title {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: var(--color-light);
+}
+
+.subtitle {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    color: #9ca3af;
+}
+
+.cta-button {
+    background: linear-gradient(90deg, var(--color-accent), var(--color-secondary));
+    color: var(--color-dark);
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: all var(--timing-fast) ease-in-out;
+    box-shadow: 0 0 15px rgba(34, 211, 238, 0.5);
+}
+
+.cta-button:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 0 25px var(--color-accent);
+}
+
+/* --- HEADER --- */
+#main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: rgba(17, 24, 39, 0.95);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+.logo { font-size: 1.8em; color: var(--color-accent); font-weight: 900; }
+nav a { color: var(--color-light); text-decoration: none; margin-left: 30px; transition: color var(--timing-fast); }
+nav a:hover { color: var(--color-accent); }
+
+
+/* --- SECCIÓN HERO (IMAGEN 1 & 2) --- */
+.fullscreen-section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efecto de Fondo 3D/Partículas (Placeholder) */
+#hero-bg-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('ikimo_samurai_bg.jpg') no-repeat center center/cover; /* Imagen base */
+    z-index: 1;
+    filter: brightness(0.5); /* Oscurecer imagen */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 5;
+    padding: 20px;
+}
+
+/* Efecto Glitch en el Título Principal (IMPRESCINDIBLE) */
+.ikimo-title {
+    font-size: 6em;
+    color: var(--color-light);
+    position: relative;
+    text-shadow: 0 0 5px var(--color-accent), 0 0 10px var(--color-accent);
+    animation: neon-glow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes neon-glow {
+    from { text-shadow: 0 0 5px var(--color-accent), 0 0 10px var(--color-accent); }
+    to { text-shadow: 0 0 10px var(--color-secondary), 0 0 20px var(--color-secondary), 0 0 30px var(--color-accent); }
+}
+
+.ikimo-title::before, .ikimo-title::after {
+    content: attr(data-glitch);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.ikimo-title::before {
+    left: 2px;
+    text-shadow: -2px 0 var(--color-accent);
+    clip: rect(44px, 450px, 56px, 0);
+    animation: glitch-anim 2s infinite linear alternate-reverse;
+}
+
+.ikimo-title::after {
+    left: -2px;
+    text-shadow: -2px 0 var(--color-secondary);
+    clip: rect(85px, 450px, 100px, 0);
+    animation: glitch-anim 2.5s infinite linear alternate;
+}
+
+@keyframes glitch-anim {
+    0% { clip: rect(20px, 9999px, 50px, 0); }
+    20% { clip: rect(60px, 9999px, 80px, 0); }
+    40% { clip: rect(10px, 9999px, 30px, 0); }
+    60% { clip: rect(90px, 9999px, 110px, 0); }
+    80% { clip: rect(40px, 9999px, 60px, 0); }
+    100% { clip: rect(70px, 9999px, 90px, 0); }
+}
+
+.neon-link {
+    color: var(--color-accent);
+    text-decoration: none;
+    text-shadow: 0 0 5px var(--color-accent);
+    transition: all var(--timing-fast);
+}
+.neon-link:hover {
+    color: var(--color-light);
+    text-shadow: 0 0 10px var(--color-secondary), 0 0 20px var(--color-accent);
+}
+
+/* Flecha Pulsante */
+.pulsate-arrow {
+    font-size: 2em;
+    color: var(--color-accent);
+    margin-top: 30px;
+    display: block;
+    animation: pulse 1.5s infinite;
+}
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.2); opacity: 0.7; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+
+/* --- SECCIÓN COUNTDOWN (IMAGEN 3) --- */
+#timer {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.time-unit {
+    background-color: rgba(34, 211, 238, 0.1);
+    border: 1px solid var(--color-accent);
+    padding: 20px;
+    font-size: 3em;
+    font-family: var(--font-epic);
+    border-radius: 5px;
+    min-width: 120px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 0 15px rgba(34, 211, 238, 0.3);
+}
+
+.time-unit::after {
+    content: attr(data-unit);
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 100%;
+    font-size: 0.4em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+}
+
+.video-player-custom {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    height: 450px; /* Placeholder para el video */
+    background-color: #000;
+    border: 3px solid var(--color-secondary);
+    box-shadow: 0 0 30px var(--color-secondary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-btn {
+    position: absolute;
+    z-index: 10;
+}
+.video-post-text {
+    font-style: italic;
+    color: #9ca3af;
+}
+
+/* --- SECCIÓN INDUSTRIAS (IMAGEN 4) --- */
+.industries-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.industry-card {
+    background-color: #0d1320;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid #374151;
+    transition: transform 0.5s ease-out, box-shadow 0.5s ease-out;
+    cursor: pointer;
+    perspective: 1000px; /* Para el efecto 3D */
+}
+
+/* Efecto 3D en Hover */
+.industry-card:hover {
+    transform: translateY(-10px) rotateX(5deg);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5), 0 0 20px var(--color-accent);
+}
+
+.industry-card i {
+    font-size: 3em;
+    color: var(--color-secondary);
+    margin-bottom: 15px;
+    text-shadow: 0 0 10px var(--color-secondary);
+}
+.industry-card h4 {
+    color: var(--color-light);
+}
+
+/* --- SECCIÓN CHALLENGE (IMAGEN 9) --- */
+#challenge {
+    background: radial-gradient(circle at center, #1f0322 0%, var(--color-dark) 100%);
+}
+
+.neon-text {
+    color: var(--color-secondary);
+    text-shadow: 0 0 5px var(--color-secondary), 0 0 15px var(--color-secondary);
+    letter-spacing: 2px;
+}
+
+.challenge-box {
+    background-color: rgba(255, 0, 255, 0.05);
+    border: 2px solid var(--color-secondary);
+    border-radius: 15px;
+    padding: 40px;
+    max-width: 700px;
+    margin: 30px auto;
+    position: relative;
+    overflow: hidden;
+    /* Efecto de líneas de energía (simulado) */
+}
+
+.price-list {
+    margin: 20px 0;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.price-highlight {
+    color: var(--color-accent);
+    text-shadow: 0 0 10px var(--color-accent);
+    display: block;
+    margin: 10px 0;
+}
+
+/* --- SECCIÓN REGISTRO (IMAGEN 7) --- */
+.registration-bg {
+    background: url('ikimo_form_bg.jpg') no-repeat center center/cover;
+    background-attachment: fixed; /* Parallax suave */
+    position: relative;
+}
+
+.registration-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8); /* Oscurecer para legibilidad */
+    z-index: 1;
+}
+
+.form-container {
+    position: relative;
+    z-index: 2;
+    background-color: rgba(17, 24, 39, 0.9);
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: 0 auto;
+    border: 1px solid var(--color-accent);
+    box-shadow: 0 0 20px rgba(34, 211, 238, 0.5);
+}
+
+#registration-form input, #registration-form select {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #374151;
+    border: 1px solid var(--color-accent);
+    color: var(--color-light);
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border-color var(--timing-fast), box-shadow var(--timing-fast);
+}
+
+#registration-form input:focus {
+    border-color: var(--color-secondary);
+    box-shadow: 0 0 10px var(--color-secondary);
+    outline: none;
+}
+
+.sponsor-check {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.radio-buttons input[type="radio"] {
+    display: none;
+}
+
+.radio-buttons label {
+    padding: 10px 20px;
+    border: 2px solid var(--color-accent);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color var(--timing-fast), color var(--timing-fast);
+    display: inline-block;
+    margin-left: 10px;
+    background-color: transparent;
+}
+
+.radio-buttons input[type="radio"]:checked + label {
+    background-color: var(--color-accent);
+    color: var(--color-dark);
+    font-weight: bold;
+    box-shadow: 0 0 15px var(--color-accent);
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: var(--color-dark);
+    color: #6b7280;
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #1f2937;
+}
+
+/* --- MEDIA QUERIES (Responsividad) --- */
+@media (max-width: 768px) {
+    .ikimo-title { font-size: 3.5em; }
+    .section-title { font-size: 2em; }
+    #timer { flex-wrap: wrap; }
+    .time-unit { font-size: 2em; min-width: 100px; }
+    .video-player-custom { height: 250px; width: 100%; }
+    .sponsor-check { flex-direction: column; align-items: flex-start; }
+    .radio-buttons { margin-top: 10px; }
+    nav a { margin-left: 15px; }
+}
+
