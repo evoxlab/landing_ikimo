@@ -178,6 +178,6 @@ class Dashboard extends BaseController
     {
         $session = session();
         $session->destroy();
-        return redirect()->to('/iniciar-sesion');
+        return redirect()->to('/admin');
     }
 }
