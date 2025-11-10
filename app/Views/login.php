@@ -7,25 +7,41 @@ Administración
 <?= $this->section('content') ?>
 
 <!-- login Area Start Here  -->
-<section class="ms-login-area pb-50 pt-130">
-    <div class="container">
-        <div class="ms-maxw-510 mx-auto">
-            <div class="ms-login-wrap text-center ms-login-space ms-bg-2">
-                <h3 class="ms-title4 mb-50">Bienvenido Administrador</h3>
-                <form name="form" id="form" action="javascript:void(0);" enctype="multipart/form-data" method="post" class="ms-contact-form" onsubmit="login();">
-                    <div class="ms-input2-box mb-25">
-                        <input type="email" placeholder="Email" name="email" id="email" required>
-                    </div>
-                    <div class="ms-input2-box mb-50">
-                        <input type="password" placeholder="Password" name="password" id="password" required>
-                    </div>
-                    <div class="ms-submit-btn mb-40">
-                        <button class="unfill__btn d-block w-100" type="submit" id="submit">Ingresar</button>
-                    </div>
-                    <div class="ms-forget-pass">
-                        <a href="#">¿Olvidaste tu contraseña?</a>
-                    </div>
-                </form>
+<section class="cklw9" id="pricing">
+    <div class="cpqz8 cqv4c cbxke cssij ciqov cltyg cossi" aria-hidden="true">
+        <img class="cwchu" src="<?php echo site_url() . "assets/images/blurred-shape.svg" ?>" width="760"
+            height="668" alt="Blurred shape">
+    </div>
+
+    <div class="cnr4s c1b3v c1nzj cg7lc">
+        <div class="creo4 cwt1y c5c70 cegiy">
+            <!-- Section header -->
+            <div class="c7bf6 c90dr c1nzj" style="padding-bottom: 5em;">
+                <div
+                    class="ckmmd cnsl6 c0u5w chuib czlz1 c93x7 cpodb cqmuf c4sxq cjnt3 c0dcb cuq1a c25pz c2gzf">
+                    <span class="cjdx7 cmgwh csuc4 ctbdc cgrvg c4sxq">Bienvenido Administrador</span>
+                </div>
+                <div class="">
+                    <!-- Contact form -->
+                    <form name="form" id="form" class="c1nzj" onsubmit="login()" action="javascript:void(0)" enctype="multipart/form-data" method="post">
+                        <div class="cjc8o">
+                            <div>
+                                <label class="cthiu c25fq c3e84 cqxme cjpk5" for="email" style="text-align: left;">Email</label>
+                                <input id="email" name="email" type="email" class="c9vss cuwvd" placeholder="email@ejemplo.com" required="">
+                            </div>
+                           
+                            <div>
+                                <label class="cthiu c25fq c3e84 cqxme cjpk5" for="password" style="text-align: left;">Contraseña</label>
+                                <input id="password" name="password" type="password" class="c9vss cuwvd" placeholder="********" required="">
+                            </div>
+                        </div>
+                        <div class="cjc8o caswb">
+                            <button id="submit" class="cjfft c3wrs ctuu0 ccs84 cbip1 csjfu ch2pc ceu05 cuwvd cx2av">
+                                Ingresar
+                            </button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>

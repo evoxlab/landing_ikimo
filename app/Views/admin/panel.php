@@ -41,19 +41,6 @@ ADMIN | Perú Avivamiento 3G
                                     </div>
                                 </div>
                             </div>
-                            <!-- Total Clients-->
-                            <div class="col-md-6 col-xl-3">
-                                <div class="card theme-bg bitcoin-wallet" style="border-radius: 15px;">
-                                    <div class="card-block">
-                                        <h5 class="text-white mb-2">Total de Encuestas</h5>
-                                        <h2 class="text-white mb-2 f-w-300"><?php echo $totalSurvey; ?></h2>
-                                        <span class="d-block">
-                                            <a class="text-white" href="<?php echo base_url("dashboard/encuestas");?>"><b>Ver</b></a>
-                                        </span>
-                                        <i class="fa fa-calendar f-70 fa-4x text-white"></i>
-                                    </div>
-                                </div>
-                            </div>
                             <!-- Total Users-->
                             <div class="col-md-6 col-xl-3">
                                 <div class="card theme-bg bitcoin-wallet" style="border-radius: 15px;">

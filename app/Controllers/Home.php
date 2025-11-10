@@ -13,14 +13,14 @@ class Home extends BaseController
         return view('home');
     }
 
-    public function login(): string
-    {
-        return view('login');
-    }
-
     public function thanks(): string
     {
         return view('thanks');
+    }
+
+    public function login(): string
+    {
+        return view('login');
     }
 
     // Nuevo método para manejar el envío del formulario de contacto (POST)

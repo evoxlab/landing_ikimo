@@ -3,8 +3,8 @@
 namespace App\Controllers;
 
 use App\Models\ClientModel;
+use App\Models\UnilevelModel;
 use App\Models\UserModel;
-use App\Models\SurveyModel;
 
 use App\Controllers\BaseController;
 
@@ -14,29 +14,118 @@ class Dashboard extends BaseController
 {
     public function index()
     {
+        //get session data
+        $session = session();
+        $userData = $session->get();
+        
+        $clientModel = new ClientModel();
+        $userModel = new UserModel();
+
+        //get el total de register de la tabla clients y users
+        $totalClients = $clientModel->countAll();
+        $totalUsers = $userModel->countAll();
+
+        $data = array(
+            'userData' => $userData,
+            'totalClients' => $totalClients,
+            'totalUsers' => $totalUsers
+        );
+
+        return view('admin/panel', $data);
+    }
+
+    public function estructura($id = null)
+    {
+        //load models
+        $ClientModel = new ClientModel();
+        $UnilevelModel = new UnilevelModel();
+
+        //verify method post
+        $res = service('request')->getPost();
+        if ($res) {
+            $search = $res['search'];
+            $search_explo = explode(" (", $search);
+            $code = $search_explo[0];
+
+            //get data by username
+            $obj_customer = $ClientModel->get_data_code($code);
+
+            if ($obj_customer) {
+                $id = $obj_customer->id;
+            } else {
+                $id = 1;
+            }
+        } else {
+            if (is_null($id)) {
+                $id = 1;
+            }
+        }
 
         //get session data
         $session = session();
         $userData = $session->get();
 
+        //set var
+        $customer_id_n2 = "";
+        $customer_id_n3 = "";
+        $obj_customer_n3 = "";
+        $obj_customer_n4 = "";
+
+        //get data clients
+        $obj_customer = $ClientModel->find($id);
+        //get partner level 2
+        $builder = $ClientModel->builder();
+        $builder->select('ci_clients.*, ci_unilevels.*')
+            ->join('ci_unilevels', 'ci_clients.id = ci_unilevels.client_id', 'inner')
+            ->where('ci_unilevels.sponsor_id', $id);
+        $query = $builder->get();
+        $obj_customer_n2 = $query->getResult();
+        //set var
+        if ($obj_customer_n2) {
+            foreach ($obj_customer_n2 as $key => $value) {
+                $customer_id_n2 .= $value->id . ",";
+            }
+            //DELETE LAST CARACTER ON STRING
+            $customer_id_n2 = substr($customer_id_n2, 0, strlen($customer_id_n2) - 1);
+            if ($customer_id_n2) {
+                //get data level 3
+                //$obj_customer_n3 = $UnilevelModel->get_partners_in_level($customer_id_n2);
+
+                $builder->select('ci_clients.*, ci_unilevels.*')
+                    ->join('ci_unilevels', 'ci_clients.id = ci_unilevels.client_id', 'inner')
+                    ->whereIn('ci_unilevels.sponsor_id', explode(',', $customer_id_n2));
+                $query = $builder->get();
+                $obj_customer_n3 = $query->getResult();
+
+                if ($obj_customer_n3) {
+                    foreach ($obj_customer_n3 as $key => $value) {
+                        $customer_id_n3 .= $value->customer_id . ",";
+                    }
+                    //DELETE LAST CARACTER ON STRING
+                    $customer_id_n3 = substr($customer_id_n3, 0, strlen($customer_id_n3) - 1);
+                    //get data level 4
+                    $obj_customer_n4 = $UnilevelModel->get_partners_in_level($customer_id_n3);
+                }
+            }
+            //get data    
+        }
+        //get data customer active
+        $obj_customer_button_search = $ClientModel
+            ->orderBy('name', 'ASC')
+            ->orderBy('lastname', 'ASC')
+            ->findAll();
         
-        $clientModel = new ClientModel();
-        $userModel = new UserModel();
-        $surveyModel = new SurveyModel();
-
-        //get el total de register de la tabla clients y users
-        $totalClients = $clientModel->countAll();
-        $totalUsers = $userModel->countAll();
-        $totalSurvey = $surveyModel->countAll();
-
+        //send
         $data = array(
             'userData' => $userData,
-            'totalClients' => $totalClients,
-            'totalUsers' => $totalUsers,
-            'totalSurvey' => $totalSurvey
+            'obj_customer' => $obj_customer,
+            'obj_customer_n2' => $obj_customer_n2,
+            'obj_customer_n3' => $obj_customer_n3,
+            'obj_customer_n4' => $obj_customer_n4,
+            'id' => $id,
+            'obj_customer_button_search' => $obj_customer_button_search,
         );
-
-        return view('admin/panel', $data);
+        return view('admin/structure', $data);
     }
 
     public function clients()
@@ -83,29 +172,6 @@ class Dashboard extends BaseController
         );
 
         return view('admin/users', $data);
-    }
-
-    public function surveys()
-    {
-
-        //get session data
-        $session = session();
-        $userData = $session->get();
-        
-        $surveyModel = new SurveyModel();
-        //get el total de register de la tabla clients y users
-        // obtener todos los clientes ordenados por id descendente
-        $surveys = $surveyModel->orderBy('id', 'DESC')->findAll();
-        // contar clientes y obtener total de usuarios para el array $data
-        $totalSurveys = count($surveys);
-
-        $data = array(
-            'userData' => $userData,
-            'surveys' => $surveys,
-            'totalSurveys' => $totalSurveys,
-        );
-
-        return view('admin/surveys', $data);
     }
 
     public function logout()

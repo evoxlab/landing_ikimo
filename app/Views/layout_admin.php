@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title><?= $this->renderSection('title') ?? 'Avivamiento Perú 3G | ADMIN' ?></title>
+    <title><?= $this->renderSection('title') ?? ' | ADMIN' ?></title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
@@ -39,10 +39,7 @@
         <div class="navbar-wrapper">
             <div class="navbar-brand header-logo">
                 <a class="b-brand">
-                    <div class="">
-                        <img alt="Logo" src="<?= base_url('assets/img/logo/logo.png') ?>" width="30" />
-                    </div>
-                    <span class="b-title">Avivamento Perú 3G</span>
+                    <span class="b-title">El secreto de Ikimo</span>
                 </a>
                 <a class="mobile-menu" id="mobile-collapse" href="#!"><span></span></a>
             </div>
@@ -55,6 +52,8 @@
             }
             $panel_style = null;
             $panel_color = null;
+            $estructura_color = null;
+            $estructura_style = null;
             $mantenimientos_style = null;
             $clientes_color =  null;
             $usuarios_color = null;
@@ -65,13 +64,14 @@
                     $mantenimientos_style = "active pcoded-trigger";
                     $clientes_color = "active_nav";
                     break;
+                    
                 case "usuarios":
                     $mantenimientos_style = "active pcoded-trigger";
                     $usuarios_color = "active_nav";
                     break;
-                case "encuestas":
-                    $mantenimientos_style = "active pcoded-trigger";
-                    $encuestas_color = "active_nav";
+                case "estructura":
+                    $estructura_style = "active pcoded-trigger";
+                    $estructura_color = "active_nav";
                     break;
                 default:
                     $panel_style = "active pcoded-trigger";
@@ -89,14 +89,16 @@
                             <span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Panel </span>
                         </a>
                     </li>
+                    <li class="nav-item <?php echo $estructura_style; ?>">
+                        <a href="/dashboard/estructura" class="nav-link <?php echo $estructura_color; ?>">
+                            <span class="pcoded-micon"><i class="feather icon-share-2"></i></span><span class="pcoded-mtext">Estructura</span>
+                        </a>
+                    </li>
                     <li class="nav-item pcoded-hasmenu <?php echo $mantenimientos_style; ?>">
                         <a href="#!" class="nav-link"><span class="pcoded-micon"><i class="feather icon-align-justify"></i></span><span class="pcoded-mtext">Datos</span></a>
                         <ul class="pcoded-submenu">
                             <li>
                                 <a href="/dashboard/clientes" class="<?php echo $clientes_color; ?>">Clientes</a>
-                            </li>
-                            <li>
-                                <a href="/dashboard/encuestas" class="<?php echo $encuestas_color; ?>">Encuestas</a>
                             </li>
                             <?php
                             if ($userData['role'] == 'admin') { ?>
@@ -111,11 +113,8 @@
     <header class="navbar pcoded-header navbar-expand-lg navbar-light">
         <div class="m-header">
             <a class="mobile-menu" id="mobile-collapse1" href="#!"><span></span></a>
-            <a href="index.html" class="b-brand">
-                <div class="b-bg">
-                    <img alt="Logo" src="<?= base_url('assets/img/logo/logo.png') ?>" width="30" />
-                </div>
-                <span class="b-title">Avivamiento Perú 3G</span>
+            <a class="b-brand">
+                <span class="b-title">El secreto de Ikimo</span>
             </a>
         </div>
         <a class="mobile-menu" id="mobile-header" href="#!">
