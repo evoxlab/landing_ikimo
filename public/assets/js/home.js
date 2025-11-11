@@ -70,6 +70,26 @@ function login() {
     });
 }
 
+function search_sponsor(code) {
+
+    $.ajax({
+        url: "search_sponsor",
+        method: "POST",
+        data: { code: code },
+        success: function (data) {
+            var data = JSON.parse(data);
+            if (data.status == true) {
+
+                document.getElementById("sponsor_name").value = data.message  + " ✔️";
+                document.getElementById("sponsor_code").value = code;
+
+            } else {
+                
+                document.getElementById("sponsor_name").value = "Ingreso un código inválido";
+            }
+        }
+    });
+}
 
 
 

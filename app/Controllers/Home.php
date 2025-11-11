@@ -249,6 +249,32 @@ class Home extends BaseController
         exit();
     }
 
+    public function search_sponsor()
+    {
+        $ClientModel = new ClientModel();
+        // Obtener los datos del POST
+        $postData = $this->request->getPost();
+        //set var sponsor
+        $sponsorCode = $postData['code'];
+
+        $sponsorClient = $ClientModel->select('*')->where('code', $sponsorCode)->first();
+        $sponsor_id = $sponsorClient['id'] ?? null;
+
+        if ($sponsor_id) {
+
+            $data['status'] = true;
+            $data['message'] = $sponsorClient['name'] . ' ' . $sponsorClient['lastname'];
+        } else {
+
+            $data['status'] = false;
+            $data['message'] = "";
+        }
+
+        echo json_encode($data);
+        exit();
+    }
+
+
     public function message($name, $email_customer, $new_code)
     {
         $mensaje = wordwrap("<html>

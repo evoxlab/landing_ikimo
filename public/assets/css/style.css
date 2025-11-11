@@ -898,7 +898,7 @@ select {
   color: var(--tw-prose-quotes);
   border-inline-start-width: 0.25rem;
   border-inline-start-color: var(--tw-prose-quote-borders);
-  quotes: "“" "”" "‘" "’";
+  quotes: "â€œ" "â€" "â€˜" "â€™";
   margin-top: 1.6em;
   margin-bottom: 1.6em;
   padding-inline-start: 1em;
@@ -2261,7 +2261,7 @@ input[type="search"]::-webkit-search-results-decoration {
   --tw-gradient-to: #c7d2fe var(--tw-gradient-to-position);
 }
 .csjfu {
-  --tw-gradient-to: #6366f1 var(--tw-gradient-to-position);
+  --tw-gradient-to: #d069df var(--tw-gradient-to-position);
 }
 .ctuu0 {
   background-size: 100% 100%;
@@ -2931,7 +2931,7 @@ input[type="search"]::-webkit-search-results-decoration {
   transition-duration: 500ms;
 }
 .c9quv::before {
-  --tw-content: "“";
+  --tw-content: "â€œ";
   content: var(--tw-content);
 }
 .ct4xh::before {
@@ -3218,7 +3218,7 @@ input[type="search"]::-webkit-search-results-decoration {
   transition-duration: 500ms;
 }
 .ch57t::after {
-  --tw-content: "”";
+  --tw-content: "â€";
   content: var(--tw-content);
 }
 .c6aps:hover {
@@ -3805,7 +3805,7 @@ input[type="search"]::-webkit-search-results-decoration {
     padding-bottom: 3rem;
   }
   .cwt1y {
-    padding-top: 10%;
+    padding-top: 5rem;
     padding-bottom: 5rem;
   }
   .cuza7 {
@@ -3846,7 +3846,7 @@ input[type="search"]::-webkit-search-results-decoration {
     letter-spacing: -0.0268em;
   }
   .c8jw0 {
-    font-size: 3.5rem;
+    font-size: 5.5rem;
     line-height: 1;
     letter-spacing: -0.0268em;
   }
@@ -3939,297 +3939,4 @@ input[type="search"]::-webkit-search-results-decoration {
 .cadao blockquote p:last-of-type::after {
   --tw-content: none;
   content: var(--tw-content);
-}
-
-#home-one {
-  background-color: #f5f5f5; /* Cambia esto */
-  background-image: url(../images/hero-bg.png); /* Cambia esto */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 230px 0 140px;
-}
-
-/* LÍNEA ~314 */
-#home-one {
-  /* Nuevo estilo oscuro para el fondo */
-  background-color: #0c0c0c; 
-  
-  /* **ADAPTAR: Reemplaza con la URL de tu imagen de banner** */
-  /* Ejemplo usando una imagen subida (ajusta la URL real en tu servidor) */
-  background-image: url('../images/image-gen (20).jpg'); 
-  
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 230px 0 140px;
-  
-  /* Opcional: añade un degradado oscuro superpuesto para mejorar la legibilidad del texto */
-  background-blend-mode: multiply; /* Mezcla el color de fondo con la imagen */
-}
-
-/* LÍNEA ~21: Busca .section-bg o similar */
-.section-bg {
-  /* background-color: #ffffff;  <-- Original, cambiar a oscuro */
-  background-color: #1a1a1a; /* Gris muy oscuro, casi negro */
-  padding: 90px 0;
-}
-
-/* Si usas imágenes como fondo en las tarjetas */
-.feature-box-one {
-  background-color: #1a1a1a;
-  padding: 30px;
-  border-radius: 10px;
-  border: 1px solid #333; /* Borde sutil */
-  position: relative;
-  overflow: hidden;
-}
-
-.feature-box-one::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  
-  /* **ADAPTAR: Reemplaza con la URL de tu imagen vertical específica** */
-  background-image: url('../images/image-gen (3).jpg'); 
-  background-size: cover;
-  background-position: center;
-  opacity: 0.15; /* Baja la opacidad para que el texto sea visible */
-  z-index: 0;
-}
-
-/* Asegura que el contenido esté arriba del fondo */
-.feature-box-one * {
-  position: relative;
-  z-index: 1;
-}
-/* LÍNEA ~55: Botones y enlaces */
-a, a:hover, a:focus {
-    /* color: #ff5000; <-- Original */
-    color: #00e6ee; /* Cian Neón */
-    background-color: rgba(0, 230, 238, 0.1); /* Fondo sutil moderno */
-    border-radius: 4px; /* Bordes redondeados para un look más moderno */
-    transition: background-color 0.3s ease; /* Transición suave */
-}
-
-a:hover, a:focus {
-    background-color: rgba(0, 230, 238, 0.3); /* Fondo más intenso al pasar el mouse */
-}
-:root{
-    --neon-cyan: #00e6ee;
-    --neon-magenta: #ff00ff;
-    --bg-dark-1: #0c0c0c;
-    --bg-dark-2: #1a1a1a;
-    --text-light: #e6fbff;
-    --muted: rgba(230,251,255,0.08);
-    --glass: rgba(255,255,255,0.02);
-}
-
-/* Global background & text */
-html, body {
-    background-color: var(--bg-dark-1) !important;
-    color: var(--text-light) !important;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-/* Sections & surfaces */
-.section-bg,
-.feature-box-one,
-.card,
-.panel {
-    background-color: var(--bg-dark-2) !important;
-    border: 1px solid rgba(0,230,238,0.06) !important;
-    box-shadow: 0 6px 30px rgba(0,0,0,0.6), 0 0 18px rgba(0,230,238,0.03);
-    color: var(--text-light) !important;
-}
-
-/* Accent overlays for images inside cards */
-.feature-box-one::before,
-.card::before {
-    background-blend-mode: multiply;
-    background-color: rgba(12,12,12,0.6);
-    mix-blend-mode: normal;
-    filter: saturate(1.05) contrast(1.05);
-}
-
-/* Links, focus and interactive elements */
-a, a:visited {
-    color: var(--neon-cyan) !important;
-    text-decoration: none;
-    transition: color .18s ease, text-shadow .18s ease;
-    text-shadow: 0 0 8px rgba(0,230,238,0.12);
-}
-a:hover, a:focus {
-    color: var(--neon-magenta) !important;
-    text-shadow: 0 0 18px rgba(255,0,255,0.22);
-    outline: none;
-}
-
-/* Headings */
-h1,h2,h3,h4,h5,h6,
-.h1-color, .h2-color, .h3-color, .h4-color {
-    color: var(--neon-cyan) !important;
-    text-shadow: 0 0 8px rgba(0,230,238,0.18), 0 6px 30px rgba(0,0,0,0.6);
-    font-weight: 700;
-}
-
-/* Banner title special */
-.banner-title {
-    color: var(--text-light) !important;
-    background: linear-gradient(90deg,var(--neon-cyan),var(--neon-magenta));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    text-shadow: 0 0 12px rgba(0,230,238,0.28), 0 0 18px rgba(255,0,255,0.12);
-}
-
-/* Primary buttons */
-.btn-primary,
-.cx2av, .c8ttz {
-    background: linear-gradient(90deg,var(--neon-cyan),var(--neon-magenta)) !important;
-    color: #0c0c0c !important;
-    border: 1px solid rgba(255,255,255,0.06) !important;
-    box-shadow: 0 0 10px rgba(0,230,238,0.55), 0 6px 30px rgba(0,0,0,0.6);
-    transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
-}
-.btn-primary:hover, .btn-primary:focus,
-.cx2av:hover, .c8ttz:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 0 22px rgba(255,0,255,0.85), 0 12px 40px rgba(0,0,0,0.6);
-    filter: saturate(1.2);
-}
-
-/* Inputs & selects */
-input, textarea, select, .c9vss, .ckny4, .cv1vb, .cw2z0 {
-    background-color: var(--glass) !important;
-    border: 1px solid rgba(0,230,238,0.06) !important;
-    color: var(--text-light) !important;
-    box-shadow: inset 0 1px 0 rgba(255,255,255,0.02);
-}
-input:focus, textarea:focus, select:focus,
-.c9vss:focus, .ckny4:focus, .cv1vb:focus, .cw2z0:focus {
-    border-color: var(--neon-cyan) !important;
-    box-shadow: 0 0 20px rgba(0,230,238,0.18), 0 6px 30px rgba(0,0,0,0.6);
-    outline: none;
-}
-
-/* Checkboxes & radios colored */
-[type="checkbox"], [type="radio"], .cser6, .cg1tx {
-    background-color: transparent !important;
-    border-color: rgba(0,230,238,0.12) !important;
-}
-[type="checkbox"]:checked, [type="radio"]:checked,
-.cser6:checked, .cg1tx:checked {
-    background-color: var(--neon-cyan) !important;
-    box-shadow: 0 0 10px rgba(0,230,238,0.45);
-    border-color: transparent !important;
-}
-
-/* Footer & small text */
-.footer, footer, .small, .crll1 {
-    color: rgba(230,251,255,0.82) !important;
-    border-top: 1px solid rgba(0,0,0,0.45);
-}
-
-/* Neon dividers */
-hr {
-    border-top: 1px solid rgba(0,230,238,0.06);
-    box-shadow: 0 0 12px rgba(0,230,238,0.03) inset;
-}
-
-/* Subtle animated neon gradient effect for highlights */
-@keyframes neonPulse {
-    0% { filter: drop-shadow(0 0 6px rgba(0,230,238,0.12)); }
-    50% { filter: drop-shadow(0 0 18px rgba(255,0,255,0.18)); }
-    100% { filter: drop-shadow(0 0 6px rgba(0,230,238,0.12)); }
-}
-.neon-highlight {
-    background: linear-gradient(90deg, rgba(0,230,238,0.06), rgba(255,0,255,0.04));
-    border-radius: 8px;
-    animation: neonPulse 4s ease-in-out infinite;
-}
-
-/* Optional subtle scrollbar styling */
-::-webkit-scrollbar { width: 10px; height: 10px; }
-::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, var(--neon-cyan), var(--neon-magenta));
-    border-radius: 999px;
-    box-shadow: 0 0 12px rgba(0,230,238,0.12);
-}
-::-webkit-scrollbar-track { background: transparent; }
-/* LÍNEA ~172: Títulos principales (ejemplo) */
-.h1-color, .h2-color, .h3-color, .h4-color {
-  /* color: #ff5000; <-- Original */
-  color: #00e6ee; /* Cian Neón */
-}
-
-/* LÍNEA ~270: Botón Primario */
-.btn-primary {
-  /* background-color: #ff5000; <-- Original */
-  background-color: #00e6ee; /* Cian Neón */
-  border-color: #00e6ee;
-}
-
-.btn-primary:hover, .btn-primary:focus {
-  /* background-color: #e54700; <-- Original */
-  background-color: #ff00ff; /* Magenta Neón al pasar el ratón */
-  border-color: #ff00ff;
-}
-/* LÍNEA ~270: Añade esto al final del bloque .btn-primary */
-.btn-primary {
-  /* ... estilos existentes ... */
-  box-shadow: 0 0 8px rgba(0, 230, 238, 0.7); /* Sombra de brillo Cian */
-  transition: all 0.3s ease-in-out;
-}
-
-.btn-primary:hover {
-  /* ... estilos existentes ... */
-  box-shadow: 0 0 15px rgba(255, 0, 255, 0.9); /* Sombra de brillo Magenta al hacer hover */
-}
-/* LÍNEA ~328 */
-.banner-title {
-  /* color: #212121; <-- Original, ¡muy oscuro para el nuevo fondo! */
-  color: #ffffff; /* Blanco puro */
-  /* Si quieres el color neón: color: #00e6ee; */
-  font-size: 55px;
-  font-weight: 700;
-  line-height: 1.2;
-}
-
-.contenedor-imagen-ikimo {
-  /* 1. Define el tamaño mínimo para evitar que desaparezca */
-  min-height: 100vh; /* O un valor fijo si lo necesitas, por ejemplo: 600px */
-  width: 100%;
-
-  /* 2. Propiedades Clave para el Ajuste */
-  background-image: url('ruta/a/tu/imagen.jpg');
-  background-size: cover; /* **CLAVE:** Escala la imagen para cubrir todo el contenedor. Recorta si es necesario. */
-  background-position: center center; /* Centra la imagen horizontal y verticalmente. */
-  background-repeat: no-repeat; /* Evita que la imagen se repita. */
-
-  /* 3. Ajuste de Contraste (Opcional, pero útil si el texto se pierde) */
-  /* Puedes usar un pseudo-elemento para oscurecer la imagen y que el texto blanco resalte */
-}
-
-.imagen-principal-ikimo {
-  width: 100%; /* La imagen ocupará el 100% del ancho de su contenedor. */
-  height: auto; /* **CLAVE:** Mantiene la proporción original de la imagen. */
-  display: block; /* Elimina espacios extra que a veces deja el navegador. */
-}
-
-/* Media query para pantallas más pequeñas (como móviles) */
-@media (max-width: 768px) {
-  .contenedor-imagen-ikimo {
-    /* Aquí puedes forzar un alto menor en el móvil si 100vh es demasiado */
-    min-height: 60vh; 
-  }
-
-  /* Reduce el tamaño de los títulos en móvil si es necesario */
-  h1 {
-    font-size: 2.5rem; 
-  }
 }
