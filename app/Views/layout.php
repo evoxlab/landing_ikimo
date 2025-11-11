@@ -101,7 +101,7 @@
     <script src="<?php echo base_url('assets/js/vendors/alpinejs.min.js') ?>" defer=""></script>
     <script src="<?php echo base_url('assets/js/vendors/aos.js') ?>"></script>
     <script src="<?php echo base_url('assets/js/main.js') ?>"></script>
-    <script src='<?php echo base_url('assets/js/home.js?123'); ?>'></script>
+    <script src='<?php echo base_url('assets/js/home.js?1234'); ?>'></script>
 
 </body>
 <!-- Mirrored from preview.cruip.com/open-pro/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 22 Jul 2025 11:58:51 GMT -->

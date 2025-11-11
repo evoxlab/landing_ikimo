@@ -420,7 +420,7 @@ El secreto de Ikimo
                             <div id="sponsor_details" style="display: none;">
                                 <div>
                                     <label class="cthiu c25fq c3e84 cqxme cjpk5" for="sponsor_code" style="text-align: left;">Ingrese Código</label>
-                                    <input id="sponsor_code" name="sponsor_code" type="text" class="c9vss cuwvd" placeholder="RC01" required style="text-transform: uppercase;" oninput="this.value=this.value.toUpperCase(); search_sponsor(this.value);">
+                                    <input id="sponsor_code" name="sponsor_code" type="text" class="c9vss cuwvd" placeholder="BR01" required style="text-transform: uppercase;" oninput="this.value=this.value.toUpperCase(); search_sponsor(this.value);">
                                 </div>
                                 <div>
                                     <label class="cthiu c25fq c3e84 cqxme cjpk5" for="sponsor_name" style="text-align: left;">Nombre del Sponsor</label>
