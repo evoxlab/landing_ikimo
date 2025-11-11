@@ -17,7 +17,7 @@ class Dashboard extends BaseController
         //get session data
         $session = session();
         $userData = $session->get();
-        
+
         $clientModel = new ClientModel();
         $userModel = new UserModel();
 
@@ -72,13 +72,15 @@ class Dashboard extends BaseController
 
         //get data clients
         $obj_customer = $ClientModel->find($id);
+
         //get partner level 2
         $builder = $ClientModel->builder();
-        $builder->select('ci_clients.*, ci_unilevels.*')
+        $builder->select('ci_clients.*, ci_unilevels.sponsor_id')
             ->join('ci_unilevels', 'ci_clients.id = ci_unilevels.client_id', 'inner')
             ->where('ci_unilevels.sponsor_id', $id);
         $query = $builder->get();
         $obj_customer_n2 = $query->getResult();
+
         //set var
         if ($obj_customer_n2) {
             foreach ($obj_customer_n2 as $key => $value) {
@@ -86,11 +88,10 @@ class Dashboard extends BaseController
             }
             //DELETE LAST CARACTER ON STRING
             $customer_id_n2 = substr($customer_id_n2, 0, strlen($customer_id_n2) - 1);
+
             if ($customer_id_n2) {
                 //get data level 3
-                //$obj_customer_n3 = $UnilevelModel->get_partners_in_level($customer_id_n2);
-
-                $builder->select('ci_clients.*, ci_unilevels.*')
+                $builder->select('ci_clients.*, ci_unilevels.sponsor_id')
                     ->join('ci_unilevels', 'ci_clients.id = ci_unilevels.client_id', 'inner')
                     ->whereIn('ci_unilevels.sponsor_id', explode(',', $customer_id_n2));
                 $query = $builder->get();
@@ -98,12 +99,16 @@ class Dashboard extends BaseController
 
                 if ($obj_customer_n3) {
                     foreach ($obj_customer_n3 as $key => $value) {
-                        $customer_id_n3 .= $value->customer_id . ",";
+                        $customer_id_n3 .= $value->id . ",";
                     }
                     //DELETE LAST CARACTER ON STRING
                     $customer_id_n3 = substr($customer_id_n3, 0, strlen($customer_id_n3) - 1);
                     //get data level 4
-                    $obj_customer_n4 = $UnilevelModel->get_partners_in_level($customer_id_n3);
+                    $builder->select('ci_clients.*, ci_unilevels.sponsor_id')
+                        ->join('ci_unilevels', 'ci_clients.id = ci_unilevels.client_id', 'inner')
+                        ->whereIn('ci_unilevels.sponsor_id', explode(',', $customer_id_n3));
+                    $query = $builder->get();
+                    $obj_customer_n4 = $query->getResult();
                 }
             }
             //get data    
@@ -113,7 +118,7 @@ class Dashboard extends BaseController
             ->orderBy('name', 'ASC')
             ->orderBy('lastname', 'ASC')
             ->findAll();
-        
+
         //send
         $data = array(
             'userData' => $userData,
@@ -160,16 +165,16 @@ class Dashboard extends BaseController
         //get session data
         $session = session();
         $userData = $session->get();
-        
+
         $clientModel = new ClientModel();
         //get el total de register de la tabla clients y users
         // obtener todos los clientes ordenados por id descendente
         $clients = $clientModel->select('ci_clients.*, ci_unilevels.*')
-                    ->join('ci_unilevels', 'ci_clients.id = ci_unilevels.client_id', 'left')
-                    ->orderBy('ci_clients.id', 'DESC')
-                    ->findAll();
+            ->join('ci_unilevels', 'ci_clients.id = ci_unilevels.client_id', 'left')
+            ->orderBy('ci_clients.id', 'DESC')
+            ->findAll();
 
-        
+
 
 
         // contar clientes y obtener total de usuarios para el array $data
@@ -190,7 +195,7 @@ class Dashboard extends BaseController
         //get session data
         $session = session();
         $userData = $session->get();
-        
+
         $userModel = new UserModel();
         //get el total de register de la tabla clients y users
         // obtener todos los clientes ordenados por id descendente

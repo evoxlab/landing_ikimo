@@ -230,7 +230,7 @@ Admin | Clientes
                                                                             $color = 'green';
                                                                             $style = "btn-light-success";
                                                                             ?>
-                                                                            <a style="color:<?php echo $color; ?>!important;font-size: 10px;" class="btn btn-sm fs-9 py-1 px-1" href="#" onclick="show_info('<?php echo $obj_customer['name']; ?>', '<?php echo $obj_customer['lastname']; ?>', '<?php echo $obj_customer['email']; ?>','<?php echo $obj_customer['code']; ?>','<?php echo $obj_customer['country']; ?>');" data-bs-toggle="modal" data-bs-target="#kt_modal_info"><?php echo $obj_customer['code']; ?><br /><?php echo $obj_customer['name']; ?></a>
+                                                                            <a style="color:<?php echo $color; ?>!important;font-size: 10px;" class="btn btn-sm fs-9 py-1 px-1" href="#" onclick="show_info('<?php echo $obj_customer['name']; ?>', '<?php echo $obj_customer['lastname']; ?>', '<?php echo $obj_customer['email']; ?>','<?php echo $obj_customer['code']; ?>','<?php echo $obj_customer['country']; ?>');" data-bs-toggle="modal" data-bs-target="#kt_modal_info"><?php echo $obj_customer['name']; ?><br /><?php echo $obj_customer['lastname']; ?></a>
                                                                             <!------------->
                                                                             <!--//NIVEL 2-->
                                                                             <!------------->
@@ -252,7 +252,7 @@ Admin | Clientes
                                                                                             $color = 'green';
                                                                                             $style = "btn-light-success";
                                                                                             ?>
-                                                                                            <a href="#" style="color:<?php echo $color; ?> !important;font-size: 10px;" class="btn btn-sm fs-9 py-1 px-1" onclick="show_info('<?php echo $value->name; ?>', '<?php echo $value->lastname; ?>', '<?php echo $value->code; ?>');" data-bs-toggle="modal" data-bs-target="#kt_modal_info"><?php echo $value->code; ?><br /><?php echo $value->name; ?></a>
+                                                                                            <a href="#" style="color:<?php echo $color; ?> !important;font-size: 10px;" class="btn btn-sm fs-9 py-1 px-1" onclick="show_info('<?php echo $value->name; ?>', '<?php echo $value->lastname; ?>', '<?php echo $value->email; ?>', '<?php echo $value->code; ?>', '<?php echo $value->country; ?>');" data-bs-toggle="modal" data-bs-target="#kt_modal_info"><?php echo $value->name; ?><br /><?php echo $value->lastname; ?></a>
                                                                                             <!------------->
                                                                                             <!--//NIVEL 3-->
                                                                                             <!------------->
@@ -260,72 +260,42 @@ Admin | Clientes
                                                                                             ?>
                                                                                                 <ul class="d-sm-block">
                                                                                                     <?php foreach ($obj_customer_n3 as $value3) { ?>
-                                                                                                        <?php if ($value->customer_id2 == $value3->sponsor_id) { ?>
+                                                                                                        <?php if ($value->id == $value3->sponsor_id) { ?>
                                                                                                             <li>
                                                                                                                 <form method="post" action="<?php echo site_url() . "dashboard/estructura"; ?>" class="w-100">
                                                                                                                     <input type="hidden" id="search" name="search" value="<?php echo $value3->code; ?> (<?php echo $value3->name; ?><?php echo $value3->lastname; ?>)">
                                                                                                                     <button type="submit" style="background-color: white;border: none;">
-                                                                                                                        <div id="level-2">
+                                                                                                                        <div id="level-3">
                                                                                                                             <img src='<?php echo base_url("assets/admin/img/300-1.jpg"); ?>' alt="avatar" class="img-responsive symbol symbol-30px symbol-md-40px img-customer-structure" style="width: 40px;" onerror='this.onerror=null; this.src="<?php echo base_url("assets/admin/img/300-1.jpg"); ?>"'>
                                                                                                                         </div>
                                                                                                                     </button>
                                                                                                                 </form>
                                                                                                                 <?php
-
-                                                                                                                if ($value3->active == '1') {
-                                                                                                                    if ($value3->point_personal_color >= 500) {
-                                                                                                                        $color = '#9B00FF';
-                                                                                                                        $style = "btn-light-purple";
-                                                                                                                    } else {
-                                                                                                                        $color = 'green';
-                                                                                                                        $style = "btn-light-success";
-                                                                                                                    }
-                                                                                                                } else {
-                                                                                                                    $color = 'red';
-                                                                                                                    $style = "btn-light-danger";
-                                                                                                                }
+                                                                                                                $color = 'green';
+                                                                                                                $style = "btn-light-success";
                                                                                                                 ?>
-                                                                                                                <a href="#" style="color:<?php echo $color; ?> !important;font-size: 10px;" class="btn btn-sm fs-9 py-1 px-1" onclick="show_info('<?php echo $value3->name; ?>', '<?php echo $value3->lastname; ?>', '<?php echo $value3->code; ?>', '<?php echo $value3->membership_name; ?>', '<?php echo $value3->range_name; ?>', '<?php echo $value3->active; ?>', '<?php echo $value3->pais_img; ?>', '<?php echo format_number_miles($value3->point_personal); ?>', '<?php echo format_number_miles($value3->point_grupal); ?>');" data-bs-toggle="modal" data-bs-target="#kt_modal_info"><?php echo $value3->code; ?><br /><?php echo $value3->name; ?></a>
+                                                                                                                <a href="#" style="color:<?php echo $color; ?> !important;font-size: 10px;" class="btn btn-sm fs-9 py-1 px-1" onclick="show_info('<?php echo $value3->name; ?>', '<?php echo $value3->lastname; ?>', '<?php echo $value3->email; ?>', '<?php echo $value3->code; ?>', '<?php echo $value3->country; ?>');" data-bs-toggle="modal" data-bs-target="#kt_modal_info"><?php echo $value3->name; ?><br /><?php echo $value3->lastname; ?></a>
                                                                                                                 <!------------->
                                                                                                                 <!--//NIVEL 4-->
                                                                                                                 <!------------->
                                                                                                                 <?php if (count($obj_customer_n4) > 0) { ?>
                                                                                                                     <ul class="d-sm-block">
                                                                                                                         <?php foreach ($obj_customer_n4 as $value4) { ?>
-                                                                                                                            <?php if ($value3->customer_id2 == $value4->sponsor_id) { ?>
+                                                                                                                            <?php if ($value3->id == $value4->sponsor_id) { ?>
                                                                                                                                 <li>
                                                                                                                                     <form method="post" action="<?php echo site_url() . "dashboard/estructura"; ?>" class="w-100">
                                                                                                                                         <input type="hidden" id="search" name="search" value="<?php echo $value4->code; ?> (<?php echo $value4->name; ?><?php echo $value4->lastname; ?>)">
                                                                                                                                         <button type="submit" style="background-color: white;border: none;">
-                                                                                                                                            <div id="level-3">
-                                                                                                                                                <?php
-                                                                                                                                                if ($value4->range_img) { ?>
-                                                                                                                                                    <img loading="lazy" src='<?php echo site_url() . "rangos/$value4->range_id/$value4->range_img"; ?>' alt="Rango" class="img-responsive symbol symbol-30px symbol-md-40px img-customer-structure" style="width: 40px;" onerror='this.onerror=null; this.src="<?php echo site_url() . "assets/metronic8/media/avatars/300-1.jpg"; ?>"'>
-                                                                                                                                                    <?php } else {
-                                                                                                                                                    if (is_null($value3->avatar)) { ?>
-                                                                                                                                                        <img loading="lazy" src='<?php echo site_url() . "assets/metronic8/media/avatars/300-1.jpg"; ?>' alt="avatar" class="img-responsive symbol symbol-30px symbol-md-40px" style="width: 40px;border-radius:5px;" onerror='this.onerror=null; this.src="<?php echo site_url() . "assets/metronic8/media/avatars/300-1.jpg"; ?>"'>
-                                                                                                                                                    <?php } else { ?>
-                                                                                                                                                        <img loading="lazy" src='<?php echo site_url() . "avatar/" . $value4->customer_id2 . "/" . $value4->avatar; ?>' alt="avatar" class="img-responsive symbol symbol-30px symbol-md-40px img-customer-structure" style="width: 40px;" onerror='this.onerror=null; this.src="<?php echo site_url() . "assets/metronic8/media/avatars/300-1.jpg"; ?>"'>
-                                                                                                                                                <?php }
-                                                                                                                                                } ?>
+                                                                                                                                            <div id="level-4">
+                                                                                                                                                <img src='<?php echo base_url("assets/admin/img/300-1.jpg"); ?>' alt="avatar" class="img-responsive symbol symbol-30px symbol-md-40px img-customer-structure" style="width: 40px;" onerror='this.onerror=null; this.src="<?php echo base_url("assets/admin/img/300-1.jpg"); ?>"'>
                                                                                                                                             </div>
                                                                                                                                         </button>
                                                                                                                                     </form>
                                                                                                                                     <?php
-                                                                                                                                    if ($value4->active == '1') {
-                                                                                                                                        if ($value4->point_personal_color >= 500) {
-                                                                                                                                            $color = '#9B00FF';
-                                                                                                                                            $style = "btn-light-purple";
-                                                                                                                                        } else {
-                                                                                                                                            $color = 'green';
-                                                                                                                                            $style = "btn-light-success";
-                                                                                                                                        }
-                                                                                                                                    } else {
-                                                                                                                                        $color = 'red';
-                                                                                                                                        $style = "btn-light-danger";
-                                                                                                                                    }
+                                                                                                                                    $color = 'green';
+                                                                                                                                    $style = "btn-light-success";
                                                                                                                                     ?>
-                                                                                                                                    <a href="#" style="color:<?php echo $color; ?> !important;font-size: 10px;" class="btn btn-sm fs-9 py-1 px-1" onclick="show_info('<?php echo $value4->name; ?>', '<?php echo $value4->lastname; ?>', '<?php echo $value4->code; ?>',  '<?php echo $value4->membership_name; ?>',  '<?php echo $value4->range_name; ?>', '<?php echo $value4->active; ?>', '<?php echo $value4->pais_img; ?>', '<?php echo format_number_miles($value4->point_personal); ?>', '<?php echo format_number_miles($value4->point_grupal); ?>');" data-bs-toggle="modal" data-bs-target="#kt_modal_info"><?php echo $value4->code; ?><br /><?php echo $value4->name; ?></a>
+                                                                                                                                    <a href="#" style="color:<?php echo $color; ?> !important;font-size: 10px;" class="btn btn-sm fs-9 py-1 px-1" onclick="show_info('<?php echo $value4->name; ?>', '<?php echo $value4->lastname; ?>', '<?php echo $value4->email; ?>', '<?php echo $value4->code; ?>', '<?php echo $value4->country; ?>');" data-bs-toggle="modal" data-bs-target="#kt_modal_info"><?php echo $value4->name; ?><br /><?php echo $value4->lastname; ?></a>
                                                                                                                                 </li>
                                                                                                                             <?php } ?>
                                                                                                                         <?php } ?>
