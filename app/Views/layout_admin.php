@@ -29,6 +29,9 @@
     <link rel="shortcut icon" href="<?= base_url('assets/img/favicon/favicon.ico') ?>" />
     <link rel="apple-touch-icon" sizes="180x180" href="<?= base_url('assets/img/favicon/apple-touch-icon.png') ?>" />
     <link rel="manifest" href="<?= base_url('assets/img/favicon/site.webmanifest') ?>" />
+    <script>
+        var site = '<?php echo site_url(); ?>';
+    </script>
     <!-- end favicon -->
     <?= $this->renderSection('css') ?>
 </head>

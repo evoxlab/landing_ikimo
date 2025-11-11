@@ -46,12 +46,11 @@ class Dashboard extends BaseController
             $search = $res['search'];
             $search_explo = explode(" (", $search);
             $code = $search_explo[0];
-
             //get data by username
-            $obj_customer = $ClientModel->get_data_code($code);
+            $obj_customer = $ClientModel->where('code', $code)->first();
 
             if ($obj_customer) {
-                $id = $obj_customer->id;
+                $id = $obj_customer['id'];
             } else {
                 $id = 1;
             }
@@ -128,6 +127,33 @@ class Dashboard extends BaseController
         return view('admin/structure', $data);
     }
 
+    public function estructura_up()
+    {
+        //ACTIVE CUSTOMER NORMALY
+        if ($this->request->isAJAX()) {
+            //var
+            $sponsor_id = null;
+            //get data mehotd post
+            $res = service('request')->getPost();
+            $id = $res['id'];
+            //query
+            $Unilevels = new UnilevelModel();
+            $obj_unilevel = $Unilevels->get_sponsor_id_by_customer_id($id);
+            if ($obj_unilevel) {
+                $sponsor_id = $obj_unilevel->sponsor_id;
+            }
+            //verify
+            if (!is_null($sponsor_id) && $sponsor_id != 0 && $sponsor_id != 1) {
+                $data['status'] = true;
+                $data['url'] = site_url() . "dashboard/estructura/$sponsor_id";
+            } else {
+                $data['status'] = false;
+            }
+            echo json_encode($data);
+            exit();
+        }
+    }
+
     public function clients()
     {
 
@@ -138,7 +164,14 @@ class Dashboard extends BaseController
         $clientModel = new ClientModel();
         //get el total de register de la tabla clients y users
         // obtener todos los clientes ordenados por id descendente
-        $clients = $clientModel->orderBy('id', 'DESC')->findAll();
+        $clients = $clientModel->select('ci_clients.*, ci_unilevels.*')
+                    ->join('ci_unilevels', 'ci_clients.id = ci_unilevels.client_id', 'left')
+                    ->orderBy('ci_clients.id', 'DESC')
+                    ->findAll();
+
+        
+
+
         // contar clientes y obtener total de usuarios para el array $data
         $totalClients = count($clients);
 
