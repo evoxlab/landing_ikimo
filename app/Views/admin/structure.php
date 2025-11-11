@@ -1,7 +1,7 @@
 <?= $this->extend('layout_admin') ?>
 
 <?= $this->section('title') ?>
-Admin | Clientes
+Admin | Estructura
 <?= $this->endSection() ?>
 
 <?= $this->section('content') ?>

@@ -63,15 +63,20 @@ function exportToExcel(customers) {
         return {
             id: customer.id,
             customer: customer.name,
-            dni: customer.dni,
+            lastname: customer.lastname,
+            code: customer.code,
             phone: customer.phone,
-            email: customer.email
+            email: customer.email,
+            country: customer.country,
+            sponsor_name: customer.sponsor_name,
+            sponsor_code: customer.sponsor_code
+
         }
     })
     const workbook = XLSX.utils.book_new();
     const worksheet = XLSX.utils.json_to_sheet(data);
     XLSX.utils.book_append_sheet(workbook, worksheet, "clientes");
-    XLSX.utils.sheet_add_aoa(worksheet, [["ID", "CLIENTE", "DNI", "TELEFONO","CORREO"]], { origin: "A1" });
+    XLSX.utils.sheet_add_aoa(worksheet, [["ID", "CLIENTE", "APELLIDO", "CODIGO", "TELEFONO","CORREO","PAIS","SPONSOR","CODIGO SPONSOR"]], { origin: "A1" });
     XLSX.writeFile(workbook, "clientes.xlsx", { compression: true });
 }
 

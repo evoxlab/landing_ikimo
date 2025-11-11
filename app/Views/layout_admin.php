@@ -23,12 +23,13 @@
     <!-- Prerequisites datepicker-->
     <script src="<?php echo site_url() . "assets/admin/js/jquery-3.3.1.js"; ?>"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-    <!-- begin favico -->
-    <link rel="icon" type="image/png" href="<?= base_url('assets/img/favicon/favicon-96x96.png') ?>" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="<?= base_url('assets/img/favicon/favicon.svg') ?>" />
-    <link rel="shortcut icon" href="<?= base_url('assets/img/favicon/favicon.ico') ?>" />
-    <link rel="apple-touch-icon" sizes="180x180" href="<?= base_url('assets/img/favicon/apple-touch-icon.png') ?>" />
-    <link rel="manifest" href="<?= base_url('assets/img/favicon/site.webmanifest') ?>" />
+    <!-- begin favicon -->
+    <link rel="icon" type="image/png" href="<?php echo base_url("assets/images/favicon/favicon-96x96.png"); ?>" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="<?php echo base_url("assets/images/favicon/favicon.svg"); ?>" />
+    <link rel="shortcut icon" href="<?php echo base_url("assets/images/favicon/favicon.ico"); ?>" />
+    <link rel="apple-touch-icon" sizes="180x180" href="<?php echo base_url("assets/images/favicon/apple-touch-icon.png"); ?>" />
+    <link rel="manifest" href="<?php echo base_url("assets/images/favicon/site.webmanifest"); ?>" />
+    <!-- end favicon -->
     <script>
         var site = '<?php echo site_url(); ?>';
     </script>
