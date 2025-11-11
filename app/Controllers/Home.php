@@ -291,7 +291,7 @@ class Home extends BaseController
                         <table align='center' bgcolor='#ffffff' border='0' cellpadding='0' cellspacing='0'>
                           <tbody><tr style='text-align:center'>
                               <td height='26'>
-                              <img border='0' style='display:inline-block' src='https://avivamientoperug3.com/assets/img/logo/logo.png' width='90' class='CToWUd'>
+                              <img border='0' style='display:inline-block' src='https://www.elsecretodeikimo.info/assets/images/logo.png' width='90' class='CToWUd'>
                               </td>
                               </tr>
                         </tbody>
@@ -305,7 +305,7 @@ class Home extends BaseController
                     </tr>
                     <tr>
                       <td style='color:#485360;padding:0 0 15px;font:20px Arial;padding:0 7%;text-align:center'>
-                        <b>Su registro para El secreto de Ikimo se ha completado correctamente. Lo esperamos con muchas ansias.</b>
+                        <b>Su registro para El secreto de Ikimo se ha completado correctamente.</b>
                       </td>
                     </tr>
                     <tr>
