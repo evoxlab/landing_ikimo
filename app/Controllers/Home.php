@@ -310,7 +310,7 @@ class Home extends BaseController
                     </tr>
                     <tr>
                       <td style='font:20px Arial;padding:0 0 15px;color:#485360;text-align:center'>
-                        Sú código de patrocinador es: $new_code,                                
+                        Sú código de patrocinador es: $new_code                                
                       </td>
                     </tr>
                     <tr>
