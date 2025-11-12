@@ -126,6 +126,9 @@ El secreto de Ikimo
                         <h3 class="cthiu cby5j c336v cndaf cr6se cjy9f cjpk5" style="color: #d7f952;">
                             Mira el video hasta el final
                         </h3>
+                        <a href="#contact" onclick="event.preventDefault(); document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' });" class="cjfft c3wrs ctuu0 ccs84 cbip1 csjfu ch2pc ceu05 cuwvd cx2av">
+                            Quiero registrarme ahora
+                        </a>
                     </div>
                 </div>
             </div>
